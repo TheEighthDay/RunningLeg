@@ -9,6 +9,22 @@ App({
     // 登录
     wx.login({
       success: res => {
+        wx.request({
+          url: 'https://theeighthday.cn/loginn',
+          data:{
+            code:res.code
+          },
+          success:res =>{
+            if (res.statusCode != 200){
+              console.log("没有拿到openid session_key")
+            }
+            else{
+              console.log("成功拿到openid session_key")
+              console.log(res.data)
+            }
+            
+          }
+        })
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
