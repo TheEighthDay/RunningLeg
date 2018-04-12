@@ -1,17 +1,17 @@
 <view class='container'>
-  <view class='firstpage-view'>
-    <image src = "/image/people.png"></image>
-    <button>接收</button>
-    <button>取消</button>
+  <view>
+    <image src = "/image/people.png" class='firstpage-view'></image>
+    <button class="mini-btn" type="primary" size="mini">接收</button>
+    <button class="mini-btn" type="warn" size="mini">取消</button>
   </view>
-   <view class='firstpage-view'>
-    <image src = "/image/people.png"></image>
-    <button>接收</button>
-    <button>取消</button>
+   <view>
+    <image src = "/image/people.png"  class='firstpage-view'></image>
+    <button class="mini-btn" type="primary" size="mini">接收</button>
+    <button class="mini-btn" type="warn" size="mini">取消</button>
   </view>
-   <view class='firstpage-view'>
-    <image src = "/image/people.png"></image>
-    <button>接收</button>
-    <button>取消</button>
+   <view>
+    <image src = "/image/people.png"  class='firstpage-view'></image>
+    <button class="mini-btn" type="primary" size="mini">接收</button>
+    <button class="mini-btn" type="warn" size="mini">取消</button>
   </view>
 </view>
