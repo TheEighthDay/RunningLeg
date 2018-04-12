@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/Firstpage/Firstpage",
+    "pages/Secondpage/Secondpage",
     "pages/logs/logs"
   ],
   "window":{
@@ -8,5 +9,22 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color": "#a9b7b7",
+    "selectdColor": "#eb4f38",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list":[{
+      "pagePath": "pages/Firstpage/Firstpage",
+      "text": "送外卖",
+      "iconPath": "/image/activity.png",
+      "selectdIconPath": "pages/image/activity.png"
+    },{
+      "pagePath": "pages/Secondpage/Secondpage",
+      "text": "接外卖",
+      "iconPath": "/image/brush.png",
+      "selectdIconPath": "pages/image/brush.png"
+    }]
   }
 }

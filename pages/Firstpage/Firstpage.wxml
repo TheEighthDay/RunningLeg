@@ -1,1 +1,17 @@
-<text>此处展示储物柜</text>
+<view class='container'>
+  <view class='firstpage-view'>
+    <image src = "/image/people.png"></image>
+    <button>接收</button>
+    <button>取消</button>
+  </view>
+   <view class='firstpage-view'>
+    <image src = "/image/people.png"></image>
+    <button>接收</button>
+    <button>取消</button>
+  </view>
+   <view class='firstpage-view'>
+    <image src = "/image/people.png"></image>
+    <button>接收</button>
+    <button>取消</button>
+  </view>
+</view>
