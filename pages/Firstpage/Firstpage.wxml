@@ -1,17 +1,47 @@
 <view class='container'>
-  <view>
-    <image src = "/image/people.png" class='firstpage-view'></image>
-    <button class="mini-btn" type="primary" size="mini">接收</button>
-    <button class="mini-btn" type="warn" size="mini">取消</button>
+  <view class='firstpage-view'>
+    <image src = "/image/people.png" class='firstpage-image'></image>
+    <view>
+      <navigator url='../FFirstpage/FFirstpage' style='display:inline'>
+      <button class="mini-btn" type="primary" size="mini">接收</button>
+      </navigator>
+      <button class="mini-btn" type="warn" size="mini">取消</button>
+    </view>
   </view>
-   <view>
-    <image src = "/image/people.png"  class='firstpage-view'></image>
-    <button class="mini-btn" type="primary" size="mini">接收</button>
-    <button class="mini-btn" type="warn" size="mini">取消</button>
+  <view class='firstpage-view'>
+    <image src = "/image/people.png" class='firstpage-image'></image>
+    <view>
+      <navigator url='../FFirstpage/FFirstpage' style='display:inline'>
+      <button class="mini-btn" type="primary" size="mini">接收</button>
+      </navigator>
+      <button class="mini-btn" type="warn" size="mini">取消</button>
+    </view>
   </view>
-   <view>
-    <image src = "/image/people.png"  class='firstpage-view'></image>
-    <button class="mini-btn" type="primary" size="mini">接收</button>
-    <button class="mini-btn" type="warn" size="mini">取消</button>
+  <view class='firstpage-view'>
+    <image src = "/image/people.png" class='firstpage-image'></image>
+    <view>
+      <navigator url='../FFirstpage/FFirstpage' style='display:inline'>
+      <button class="mini-btn" type="primary" size="mini">接收</button>
+      </navigator>
+      <button class="mini-btn" type="warn" size="mini">取消</button>
+    </view>
+  </view>
+  <view class='firstpage-view'>
+    <image src = "/image/people.png" class='firstpage-image'></image>
+    <view>
+      <navigator url='../FFirstpage/FFirstpage' style='display:inline'>
+      <button class="mini-btn" type="primary" size="mini">接收</button>
+      </navigator>
+      <button class="mini-btn" type="warn" size="mini">取消</button>
+    </view>
+  </view>
+  <view class='firstpage-view'>
+    <image src = "/image/people.png" class='firstpage-image'></image>
+    <view>
+      <navigator url='../FFirstpage/FFirstpage' style='display:inline'>
+      <button class="mini-btn" type="primary" size="mini">接收</button>
+      </navigator>
+      <button class="mini-btn" type="warn" size="mini">取消</button>
+    </view>
   </view>
 </view>

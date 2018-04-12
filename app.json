@@ -3,7 +3,9 @@
     "pages/Firstpage/Firstpage",
     "pages/Secondpage/Secondpage",
     "pages/Thirdpage/Thirdpage",
-    "pages/logs/logs"
+    "pages/logs/logs",
+
+    "pages/FFirstpage/FFirstpage"
   ],
   "window":{
     "backgroundTextStyle":"light",

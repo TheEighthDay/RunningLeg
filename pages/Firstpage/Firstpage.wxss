@@ -1,11 +1,20 @@
 .container {
   background-color: #eee;
   height: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
+
 .firstpage-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.firstpage-image {
   height: 250rpx;
   width: 250rpx;
-  display: flex;
 }
 button{
   margin-top: 30rpx;
@@ -14,7 +23,4 @@ button{
 .button-sp-area{
   margin: 0 auto;
   width: 60%;
-}
-.mini-btn{
-  margin-right: 10rpx;
 }
