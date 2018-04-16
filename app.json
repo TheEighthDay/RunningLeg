@@ -1,10 +1,15 @@
 {
   "pages":[
+    
+    "pages/Me/Me",
     "pages/Firstpage/Firstpage",
     "pages/Secondpage/Secondpage",
-    "pages/Thirdpage/Thirdpage",
+    
+    "pages/PersonalInformation/PersonalInformation",
+    "pages/OrderStatus/OrderSatus",
     "pages/logs/logs",
-
+    "pages/Me/pages/BillHistory/BillHistory",
+    "pages/Me/pages/OrderHistory/OrderHistory",
     "pages/FFirstpage/FFirstpage"
   ],
   "window":{
@@ -29,8 +34,8 @@
       "iconPath": "/image/brush.png",
       "selectdIconPath": "pages/image/brush.png"
     },{
-      "pagePath": "pages/Thirdpage/Thirdpage",
-      "text": "个人信息",
+      "pagePath": "pages/Me/Me",
+      "text": "我",
       "iconPath": "/image/people.png",
       "selectdIconPath": "pages/image/people.png"
     }]
