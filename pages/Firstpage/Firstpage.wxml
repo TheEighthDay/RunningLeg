@@ -1,47 +1,7 @@
 <view class='container'>
-  <view class='firstpage-view'>
-    <image src = "/image/people.png" class='firstpage-image'></image>
-    <view>
-      <navigator url='../FFirstpage/FFirstpage' style='display:inline'>
-      <button class="mini-btn" type="primary" size="mini">接收</button>
-      </navigator>
-      <button class="mini-btn" type="warn" size="mini">取消</button>
-    </view>
-  </view>
-  <view class='firstpage-view'>
-    <image src = "/image/people.png" class='firstpage-image'></image>
-    <view>
-      <navigator url='../FFirstpage/FFirstpage' style='display:inline'>
-      <button class="mini-btn" type="primary" size="mini">接收</button>
-      </navigator>
-      <button class="mini-btn" type="warn" size="mini">取消</button>
-    </view>
-  </view>
-  <view class='firstpage-view'>
-    <image src = "/image/people.png" class='firstpage-image'></image>
-    <view>
-      <navigator url='../FFirstpage/FFirstpage' style='display:inline'>
-      <button class="mini-btn" type="primary" size="mini">接收</button>
-      </navigator>
-      <button class="mini-btn" type="warn" size="mini">取消</button>
-    </view>
-  </view>
-  <view class='firstpage-view'>
-    <image src = "/image/people.png" class='firstpage-image'></image>
-    <view>
-      <navigator url='../FFirstpage/FFirstpage' style='display:inline'>
-      <button class="mini-btn" type="primary" size="mini">接收</button>
-      </navigator>
-      <button class="mini-btn" type="warn" size="mini">取消</button>
-    </view>
-  </view>
-  <view class='firstpage-view'>
-    <image src = "/image/people.png" class='firstpage-image'></image>
-    <view>
-      <navigator url='../FFirstpage/FFirstpage' style='display:inline'>
-      <button class="mini-btn" type="primary" size="mini">接收</button>
-      </navigator>
-      <button class="mini-btn" type="warn" size="mini">取消</button>
-    </view>
+  <view class='firstpage-view' wx:for="{{foodlist}}" wx:key="navItems">
+    <navigator url='/pages/Detailinfo/Detailinfo'>
+      <image src = "{{item.imagePath}}" class='firstpage-image'></image>
+    </navigator>
   </view>
 </view>
