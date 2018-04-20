@@ -1,6 +1,14 @@
 .container {
   display: flex;
   justify-content: space-around;
-  padding: 200rpx 0;
   margin-left: 50rpx;
+}
+.image {
+  width: 750rpx;
+  height: 100rpx;
+}
+.button {
+  margin-left: 150rpx;
+  margin-right: 150rpx;
+  margin-bottom: 150rpx
 }

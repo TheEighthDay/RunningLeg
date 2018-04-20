@@ -1,11 +1,16 @@
 <view class='container'>
+<image src='/image/line3.png' class='image'></image>
   <text>发单人地址</text>
-  <text>{{todolist.address}}</text>
+  <text>{{detail.address}}</text>
+  <image src='/image/line3.png' class='image'></image>
   <text>发单人手机号</text>
-  <text>{{todolist.phone}}</text>
+  <text>{{detail.phonenumber}}</text>
+  <image src='/image/line3.png' class='image'></image>
   <text>外卖到达时间</text>
-  <text>{{todolist.time}}</text>
+  <text>{{detail.time}}</text>
+  <image src='/image/line3.png' class='image'></image>
   <text>备注信息</text>
-  <text>{{todolist.others}}</text>
+  <text>{{detail.others}}</text>
+  <image src='/image/line3.png' class='image'></image>
 </view>
-<button type="primary" plain="true">确定</button>
+<button type="primary" plain="true" class='button'>确定</button>
