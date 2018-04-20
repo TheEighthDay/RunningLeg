@@ -1,11 +1,18 @@
 {
   "pages":[
+
     "pages/Firstpage/Firstpage",
     "pages/Secondpage/Secondpage",
-    "pages/Thirdpage/Thirdpage",
-    "pages/logs/logs",
+    "pages/Me/Me",
     
-    "pages/Detailinfo/Detailinfo"
+    "pages/PersonalInformation/PersonalInformation",
+    "pages/OrderStatus/OrderSatus",
+    "pages/logs/logs",
+
+    
+    "pages/Detailinfo/Detailinfo",
+    "pages/Me/pages/BillHistory/BillHistory",
+    "pages/Me/pages/OrderHistory/OrderHistory"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -28,8 +35,8 @@
       "iconPath": "/image/brush.png",
       "selectdIconPath": "/image/brush_fill.png"
     },{
-      "pagePath": "pages/Thirdpage/Thirdpage",
-      "text": "个人信息",
+      "pagePath": "pages/Me/Me",
+      "text": "我",
       "iconPath": "/image/people.png",
       "selectdIconPath": "/image/people_fill.png"
     }]
