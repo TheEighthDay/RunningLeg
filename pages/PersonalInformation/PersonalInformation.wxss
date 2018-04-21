@@ -20,11 +20,12 @@
   display: flex;
   align-items: center;
   margin-bottom: 30rpx;
-  /* width: 40rpx;
+  width: 40rpx;
   margin-right: 10rpx;
-  color: #7ED321;
+  /* color: #7ED321; */
+  color: #EDA741;
   font-size: 40rpx;
-  font-weight: bold; */
+  font-weight: bold; 
 }
 
 .header .new-quick {
@@ -36,7 +37,7 @@
   width: 120rpx;
   padding-left: 10px;
   font-size: 30rpx;
-  color: #7ED321;
+  color: #EDA741;
 }
 
 .todos {

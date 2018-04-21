@@ -1,7 +1,11 @@
 <view class='container_one'>
-  <image src="{{userInfo.avatarUrl}}" background-size="cover" class='thirdpage-image'></image>
-  <view class="name">{{name}}</view>
-  <view>微信号：数据绑定</view>
+   <view class="userinfo">
+     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else> 
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+     </block> 
+  </view>
 </view>
 <view class="container_two">
   <view>
@@ -13,24 +17,25 @@
 </view>
 <view class='container_three'></view>
 <view class="kind-list">
-       <block wx:for-items="{{histories}}" wx:key="{{item.id}}"> 
-         <view class="kind-list-item"> 
-            <view id="{{item.id}}"  bindtap="kindToggle">
-              <button class="mini-btn">历史记录</button>
-            </view>  
-           <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
-            <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
-              <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
-                <navigator url="pages/{{page}}/{{page}}" class="navigator">
-                  <view class="navigator-text">{{page}}</view>
-                  <view class="navigator-arrow"></view>
-                </navigator>
-              </block>
-            </view>
-          </view> 
+  <block wx:for-items="{{histories}}" wx:key="{{item.id}}"> 
+    <view class="kind-list-item"> 
+      <view id="{{item.id}}"  bindtap="kindToggle">
+        <button class="mini-btn">历史记录</button>
+      </view>  
+      <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+        <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+          <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
+            <navigator url="pages/{{page}}/{{page}}" class="navigator">
+              <view class="navigator-text" wx:if="{{page=='BillHistory'}}">发单历史</view>
+              <view class="navigator-text" wx:else>接单历史</view>
+              <view class="navigator-arrow"></view>
+            </navigator>
+          </block>
         </view>
-      </block>
+      </view> 
     </view>
+  </block>
+</view>
 <view class='container_three'></view>
 <view class="container_two">
   <view>

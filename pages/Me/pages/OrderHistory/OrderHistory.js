@@ -5,7 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    histories: [
+      {
+        time: "2018/4/20 13：00",
+        success: "是",
+        amount: "50"
+      },
+      {
+        time: "2018/4/20 13：00",
+        success: "是",
+        amount: "50"
+      },
+      {
+        time: "2018/4/20 13：00",
+        success: "是",
+        amount: "50"
+      },
+      {
+        time: "2018/4/20 13：00",
+        success: "是",
+        amount: "50"
+      },]
+
   },
 
   /**

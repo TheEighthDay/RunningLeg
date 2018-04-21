@@ -1,2 +1,7 @@
-<!--pages/Me/pages/BillHistory/BillHistory.wxml-->
-<text>pages/Me/pages/BillHistory/BillHistory.wxml</text>
+<view class='container'>
+   <view class="quick" wx:for="{{ histories}}" wx:key="{{item}}" > 
+      <text>交易结束时间 :  {{item.time}}</text>
+      <text>交易是否成功 :  {{item.success}}</text>
+      <text>交易金额 :  {{item.amount}}元</text>
+    </view>  
+</view>

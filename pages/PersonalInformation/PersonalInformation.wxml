@@ -1,23 +1,66 @@
-
 <view class='container'>
 <view class="header">
     <text class="new" bindtap="createItem">地址</text>
     <view class="quick">
-      <view class="add">
-        <text>修改</text>
-      </view>
       <input class="new-quick" value="{{ todo }}" placeholder="快速添加..." bindinput="inputTodo" bindconfirm="addTodo" auto-focus />
     </view>
+     <view class="add">
+        <text>修改</text>
+      </view>
   </view>
  <view class="header">
     <text class="new" bindtap="createItem">手机号</text>
     <view class="quick">
-      <view class="add">
-        <text>修改</text>
-      </view>
       <input class="new-quick" value="{{ todo }}" placeholder="默认修改" bindinput="inputTodo" bindconfirm="addTodo" auto-focus />
     </view>
-    
+    <view class="add">
+        <text>修改</text>
+      </view>
+  </view>
+  <view class="header">
+    <text class="new" bindtap="createItem">地址</text>
+    <view class="quick">
+      <input class="new-quick" value="{{ todo }}" placeholder="快速添加..." bindinput="inputTodo" bindconfirm="addTodo" auto-focus />
+    </view>
+     <view class="add">
+        <text>修改</text>
+      </view>
+  </view>
+  <view class="header">
+    <text class="new" bindtap="createItem">地址</text>
+    <view class="quick">
+      <input class="new-quick" value="{{ todo }}" placeholder="快速添加..." bindinput="inputTodo" bindconfirm="addTodo" auto-focus />
+    </view>
+     <view class="add">
+        <text>修改</text>
+      </view>
+  </view>
+  <view class="header">
+    <text class="new" bindtap="createItem">地址</text>
+    <view class="quick">
+      <input class="new-quick" value="{{ todo }}" placeholder="快速添加..." bindinput="inputTodo" bindconfirm="addTodo" auto-focus />
+    </view>
+     <view class="add">
+        <text>修改</text>
+      </view>
+  </view>
+  <view class="header">
+    <text class="new" bindtap="createItem">地址</text>
+    <view class="quick">
+      <input class="new-quick" value="{{ todo }}" placeholder="快速添加..." bindinput="inputTodo" bindconfirm="addTodo" auto-focus />
+    </view>
+     <view class="add">
+        <text>修改</text>
+      </view>
+  </view>
+  <view class="header">
+    <text class="new" bindtap="createItem">地址</text>
+    <view class="quick">
+      <input class="new-quick" value="{{ todo }}" placeholder="快速添加..." bindinput="inputTodo" bindconfirm="addTodo" auto-focus />
+    </view>
+     <view class="add">
+        <text>修改</text>
+      </view>
   </view>
 </view>
 
