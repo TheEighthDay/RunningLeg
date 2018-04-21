@@ -1,6 +1,77 @@
 .container {
+  padding: 25rpx;
+} 
+.header {
   display: flex;
-  justify-content: space-around;
-  padding: 200rpx 0;
-  margin-left: 50rpx;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+/*框的形式*/
+.quick {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border: 1rpx solid #DDD;
+  padding: 20rpx;
+  color: #9B9B9B;
+}
+/* 修改的形式 */
+ .add {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+  width: 40rpx;
+  margin-right: 10rpx;
+  /* color: #7ED321; */
+  color: #EDA741;
+  font-size: 40rpx;
+  font-weight: bold; 
+}
+
+.header .new-quick {
+  flex: 1;
+  font-size: 30rpx;
+}
+
+.header .new {
+  width: 120rpx;
+  padding-left: 10px;
+  font-size: 30rpx;
+  color: #EDA741;
+}
+
+.todos {
+  border: 1rpx solid #DDD;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 30rpx 0;
+  padding: 0 10rpx;
+  font-size: 28rpx;
+  color: #9B9B9B;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty .title {
+  font-size: 60rpx;
+  margin: 200rpx 50rpx 50rpx;
+  color: #9B9B9B;
+}
+
+.empty .content {
+  color: #DDD;
+  text-align: center;
+}
+.button {
+  margin-left: 150rpx;
+  margin-right: 150rpx;
+  margin-bottom: 150rpx
 }
