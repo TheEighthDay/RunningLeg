@@ -1,4 +1,4 @@
-var app = getApp()
+const app = getApp()
 Page({
   data: {
     histories: [
@@ -13,7 +13,12 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  onLaunch: function () {
+  bindViewTap: function () {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
+  },
+  onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -40,6 +45,7 @@ Page({
         }
       })
     }
+  
   },
   getUserInfo: function (e) {
     console.log(e)
