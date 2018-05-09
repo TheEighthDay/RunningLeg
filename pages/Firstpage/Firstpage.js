@@ -1,3 +1,4 @@
+var app = getApp()
 Page({
   data:{
     foodlist: [
@@ -29,6 +30,18 @@ Page({
         id: "7",
         imagePath: "/image/7.png",
       }
-    ]
+    ],
+    length : 0
+  },
+  
+  sendbill: function () {
+    var that = this;
+    app.request({
+      url: "https://theeighthday.cn/getbill",
+      success: function (res) {
+          length = res.data.length
+          console.log(res.data);
+      }
+    })
   }
 })

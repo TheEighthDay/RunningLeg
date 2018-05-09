@@ -45,3 +45,7 @@
     </navigator>
   </view>
 </view>
+
+<view>
+ <text>{{userInfo.loast_login}}</text>
+</view>

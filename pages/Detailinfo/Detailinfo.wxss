@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
   margin-left: 50rpx;
+  color: #EDA741;
 }
 .image {
   width: 750rpx;

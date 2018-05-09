@@ -5,3 +5,4 @@
     </navigator>
   </view>
 </view>
+<button bindtap='sendbill'>刷新</button>
