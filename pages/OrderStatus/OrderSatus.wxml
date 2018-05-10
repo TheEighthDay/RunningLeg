@@ -1,2 +1,6 @@
-<!--pages/OrderStatus/OrderSatus.wxml-->
-<text>订单状态</text>
+  <block>
+    <view class="empty">
+      <text class="title">暂无任何订单</text>
+      <text class="content">请您前往「送外卖」或者「接外卖」添加业务</text>
+    </view>
+  </block>
