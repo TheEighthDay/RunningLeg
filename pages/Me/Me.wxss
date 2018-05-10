@@ -150,6 +150,28 @@
   border-radius: 50%;
 }
 
+.userinfo-avat {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.image{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+ 
+}
+.center{
+  display: flex;
+  flex-direction: column;   /*每个元素从上往下放，各占一行*/  
+  align-items: center;
+  justify-content: space-around;
+}
+.wallet{
+   display: space-between;
+}
 .userinfo-nickname {
   color: #aaa;
 }

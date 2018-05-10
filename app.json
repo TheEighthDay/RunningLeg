@@ -11,6 +11,7 @@
 
     
     "pages/Detailinfo/Detailinfo",
+    "pages/Wallet/Wallet",
     "pages/Me/pages/BillHistory/BillHistory",
     "pages/Me/pages/OrderHistory/OrderHistory"
   ],
