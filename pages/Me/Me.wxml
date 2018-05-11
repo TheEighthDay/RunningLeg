@@ -1,9 +1,16 @@
- <view class='container_one'> 
-     <view class="userinfo"> 
+  <view class='container_one'>
+        <view> 
+        <view class="content" >{{userInfo.nickname}}</view> 
+        <view class="content" >135****2598</view>
+        </view> 
+        <image class="userinfo-a"  src="{{userInfo.avatarurl}}">
+        </image>
+      
+     <!-- <view class="userinfo"> 
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarurl}}" background-size="cover"></image>  
       <text class="userinfo-nickname">{{userInfo.nickname}}</text>
-   </view>  
- </view> 
+   </view>   -->
+</view>  
 <view class="container_two">
  <view>
     <text style="font-weight:bold"></text>

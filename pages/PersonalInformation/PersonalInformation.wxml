@@ -35,10 +35,10 @@
   </view>
   <view class="section">
     <text>设置地址</text>
-    <input value="{{userInfo.address}}" bindblur="blurName" bindconfirm="changeName" auto-focus />
+    <input value="成都" bindblur="blurName" bindconfirm="changeName" auto-focus />
   </view>
    <view class="section">
     <text>设置手机号码</text>
-    <input value="{{userInfo.phonenumber }}" bindblur="blurName" bindconfirm="changeName" auto-focus />
+    <input value="13536982598" bindblur="blurName" bindconfirm="changeName" auto-focus />
   </view>
 </view>

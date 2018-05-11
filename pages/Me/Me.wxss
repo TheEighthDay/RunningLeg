@@ -2,6 +2,13 @@
 .container_one{
   height: 35vh;          /*页面的高度*/
   display: flex;
+  flex-direction: row;   /*每个元素从上往下放，各占一行*/  
+  align-items: center;
+  justify-content: space-around;  /*控制元素在垂直上的布局*/
+}
+.container_new{
+  height: 35vh;          /*页面的高度*/
+  display: flex;
   flex-direction: column;   /*每个元素从上往下放，各占一行*/  
   align-items: center;
   justify-content: space-around;  /*控制元素在垂直上的布局*/
@@ -149,7 +156,12 @@
   margin: 20rpx;
   border-radius: 50%;
 }
-
+.userinfo-a {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 40rpx;
+  border-radius: 50%;
+}
 .userinfo-avat {
   display: flex;
   flex-direction: row;
@@ -178,6 +190,10 @@
 .free-btn-bordernone{
   background: none !important;
   color: #000 ；
+}
+.content {
+  color: #DDD;
+  text-align: center;
 }
  /* .free-btn-bordernone::after{
   border: none;
