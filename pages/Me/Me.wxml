@@ -8,7 +8,7 @@
  <view>
     <text style="font-weight:bold"></text>
     <navigator url='../PersonalInformation/PersonalInformation' style='display:inline'>
-      <button class="mini-btn">
+      <button class="free-btn-bordernone">
       <view class='userinfo-avat'>
         <view>个人信息</view>
         <view class= "center"><image class="image" src="/image/detail.png"></image></view>
@@ -19,44 +19,43 @@
 </view>
 <view class='container_three'></view>
 <view class="container_two">
- <view>
-    <text style="font-weight:bold"></text>
+<view>
+  <text style="font-weight:bold"></text>
     <navigator url='../OrderStatus/OrderSatus' style='display:inline'>
-      <button class="mini-btn">
+      <button class="free-btn-bordernone">
       <view class='userinfo-avat'>
         <view>订单状态</view>
         <view class= "center"><image class="image" src="/image/order.png"></image></view>
       </view>
       </button>
-    </navigator>
-  </view>  
+    </navigator> 
+ </view>   
 </view>
 <view class='container_three'></view>
 <view class="container_two">
-  <view>
+<view>
     <text style="font-weight:bold"></text>
     <navigator url='../Wallet/Wallet' style='display:inline'>
-      <button class="mini-btn">
+       <button class="free-btn-bordernone"> 
       <view class='userinfo-avat'>
         <view>钱包</view>
         <view class= "center"><image class="image" src="/image/wallet.png"></image></view>
       </view>
-      </button>
+      </button>  
     </navigator>
-  </view>  
 </view>
+</view>  
 <view class='container_three'></view>
 <view class="kind-list">
   <block wx:for-items="{{histories}}" wx:key="{{item.id}}"> 
     <view class="kind-list-item"> 
       <view id="{{item.id}}"  bindtap="kindToggle">
-       <button class="mini-btn">
+       <button class="free-btn-bordernone">
       <view class='userinfo-avat'>
         <view>历史记录</view>
         <view class= "center"><image class="image" src="/image/history.png"></image></view>
       </view>
       </button>
-        <!-- <button class="mini-btn">历史记录</button> -->
       </view>  
       <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
         <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
