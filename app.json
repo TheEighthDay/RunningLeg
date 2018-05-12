@@ -25,21 +25,22 @@
     "selectedColor": "#000000",
     "backgroundColor": "#EDA741",
     "borderStyle": "white",
+    "position": "bottom",
     "list":[{
       "pagePath": "pages/Firstpage/Firstpage",
       "text": "送外卖",
-      "iconPath": "/image/activity.png",
-      "selectdIconPath": "/image/activity_fill.png"
+      "iconPath": "/image/send.png",
+      "selectedIconPath": "/image/send.png"
     },{
       "pagePath": "pages/Secondpage/Secondpage",
       "text": "接外卖",
-      "iconPath": "/image/brush.png",
-      "selectdIconPath": "/image/brush_fill.png"
+      "iconPath": "/image/receive.png",
+      "selectedIconPath": "/image/receive.png"
     },{
       "pagePath": "pages/Me/Me",
       "text": "我",
-      "iconPath": "/image/people.png",
-      "selectdIconPath": "/image/people_fill.png"
+      "iconPath": "/image/man.png",
+      "selectedIconPath": "/image/man.png"
     }]
   }
 }
