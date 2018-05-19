@@ -17,28 +17,28 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#EDA741",
+    "navigationBarBackgroundColor": "#8FBC8F",
     "navigationBarTextStyle":"white"
   },
   "tabBar":{
     "color": "white",
     "selectedColor": "#000000",
-    "backgroundColor": "#EDA741",
+    "backgroundColor": "#8FBC8F",
     "borderStyle": "white",
     "position": "bottom",
     "list":[{
       "pagePath": "pages/Firstpage/Firstpage",
-      "text": "送外卖",
+      "text": "接订单",
       "iconPath": "/image/send.png",
       "selectedIconPath": "/image/send.png"
     },{
       "pagePath": "pages/Secondpage/Secondpage",
-      "text": "接外卖",
+      "text": "发订单",
       "iconPath": "/image/receive.png",
       "selectedIconPath": "/image/receive.png"
     },{
       "pagePath": "pages/Me/Me",
-      "text": "我",
+      "text": "个人信息",
       "iconPath": "/image/man.png",
       "selectedIconPath": "/image/man.png"
     }]
