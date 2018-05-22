@@ -1,7 +1,7 @@
   <view class='container_one'>
         <view> 
         <view class="content" >{{userInfo.nickname}}</view> 
-        <view class="content" >135****2598</view>
+        <view class="content" >{{userInfo.phonenumber}}</view>
         </view> 
         <image class="userinfo-a"  src="{{userInfo.avatarurl}}">
         </image>
