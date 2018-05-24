@@ -1,35 +1,5 @@
-<!-- <view class='container'>
-<view class="header">
-    <text class="new" bindtap="createItem">昵称</text>
-    <view class="quick">
-      <input class="new-quick" value="{{ userInfo.nickName }}" placeholder="快速添加..." bindinput="inputTodo" bindconfirm="addTodo" auto-focus />
-    </view>
-     <view class="add">
-        <text>修改</text>
-      </view>
-  </view>
- <view class="header">
-    <text class="new" bindtap="createItem">地址</text>
-    <view class="quick">
-      <input class="new-quick" value="{{ userInfo.address }}" placeholder="默认修改" bindinput="inputTodo" bindconfirm="addTodo" auto-focus />
-      <view class="add">
-        <text>修改</text>
-      </view>
-    </view>
-  </view>
-  <view class="header">
-    <text class="new" bindtap="createItem">手机号</text>
-    <view class="quick">
-      <input class="new-quick" value="{{ todo }}" placeholder="快速添加..." bindinput="inputTodo" bindconfirm="addTodo" auto-focus />
-    </view>
-     <view class="add">
-        <text>修改</text>
-      </view>
-  </view>
-</view> -->
-
 <view class="container">
-  <view class="section">
+   <view class="section"> 
     <text>设置昵称</text>
     <input value="{{userInfo.nickname}}" bindblur="blurName" bindconfirm="changeName" auto-focus />
   </view>

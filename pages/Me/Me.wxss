@@ -195,6 +195,14 @@
   color: #DDD;
   text-align: center;
 }
+.section {
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #DDD;
+  color: #9B9B9B;
+  font-size: 30rpx;
+  align-items: center;
+}
  /* .free-btn-bordernone::after{
   border: none;
 }  */

@@ -1,20 +1,20 @@
 //app.js
 App({
   onLaunch: function () {
-    // wx.removeStorageSync('skey'); //清除缓存
+    wx.removeStorageSync('skey'); //清除缓存
     
-    // this.request({
-    //   url: 'https://theeighthday.cn/createbill',  //创建订单
-    //   data: {
-    //     'goal_address':'hebei',
-    //     'remark':'田凯彬最帅',
-    //     'send_address':'beijin',
-    //     'hope_time': "2018,5,20,11,23,55"
-    //   },
-    //   success: function (res) {
-    //     console.log(res)
-    //   }
-    // })
+    this.request({
+      url: 'https://theeighthday.cn/createbill',  //创建订单
+      data: {
+        'goal_address':'hebei',
+        'remark':'田凯彬最帅',
+        'send_address':'beijin',
+        'hope_time': "2018,5,20,11,23,55"
+      },
+      success: function (res) {
+        console.log(res)
+      }
+    })
     var that = this;
     console.info('登陆 app...');
     wx.showLoading({

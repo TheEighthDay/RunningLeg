@@ -8,22 +8,26 @@ Page({
     histories: [
       {
         time: "2018/4/20 13：00",
-        success: "是",
+        success: '交易成功',
+        imagePath: "/image/1.png",
         amount: "50"
       },
       {
         time: "2018/4/20 13：00",
-        success: "是",
+        success: null ,
+        imagePath: "/image/1.png",
         amount: "50"
       },
       {
         time: "2018/4/20 13：00",
-        success: "是",
-        amount: "50"
+        success: "交易成功" ,
+        imagePath: "/image/1.png",
+        amount: "40"
       },
       {
         time: "2018/4/20 13：00",
-        success: "是",
+        success: "交易失败",
+        imagePath: "/image/1.png",
         amount: "50"
       },]
 
