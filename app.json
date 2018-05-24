@@ -1,6 +1,6 @@
 {
   "pages":[
-    
+    "pages/Auth/Auth",
     "pages/Firstpage/Firstpage",
     "pages/Secondpage/Secondpage",
     "pages/Me/Me",
