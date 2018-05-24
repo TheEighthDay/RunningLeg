@@ -18,7 +18,7 @@ Page({
       url: '../logs/logs'
     })
   },
-  onShow: function () {
+  onLoad: function () {
     var app = getApp();
     console.log(app.globalData.userInfo)
     if (app.globalData.userInfo) {
