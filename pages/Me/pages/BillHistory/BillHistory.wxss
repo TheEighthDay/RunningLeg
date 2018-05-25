@@ -1,13 +1,26 @@
 .container {
   padding: 25rpx;
 }  
-/*框的形式*/
-.quick {
-  display: flex;
-  flex-direction: column; 
-  flex: 1;
-  /* align-items: center; */
-  border: 1rpx solid #DDD;
-  padding: 50rpx;
-  color: #EDA741;
+.image {
+  height: 150rpx;
+  width: 150rpx;
+  margin-top: 50rpx;
+  display: inline-block;
+}
+view {
+  position: relative;
+}
+.section {
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #DDD;
+   color: #9B9B9B; 
+  font-size: 30rpx;
+  align-items: center;
+  display: inline-block;
+  position: absolute;
+  top: 60rpx;
+  width: 500rpx;
+}
+.fail{
+  color: #AA0000;
 }

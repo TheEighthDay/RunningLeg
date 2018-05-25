@@ -1,16 +1,56 @@
-.empty {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-.empty .title {
-  font-size: 60rpx;
-  margin: 200rpx 50rpx 50rpx;
-  color: #9B9B9B;
+.container {
+  padding: 25rpx;    
+  display: flex;
+  flex-direction: column;   /*每个元素从上往下放，各占一行*/  
+  /* align-items: center; */
+  justify-content: space-around;  /*控制元素在垂直上的布局*/
+  background-image: url(http://p3379ff71.bkt.clouddn.com/imag.jpg);
 }
-.empty .content {
-  color: #DDD;
-  text-align: center;
+view {
+  position: relative;
+  height: 250px;
 }
+.line{
+  height: 30px; 
+}
+.status{
+  height: 30px; 
+  display: flex;
+  align-items: center;
+}
+ .section_receive {
+  /* padding: 20rpx 0; */
+  /* border-bottom: 1rpx solid #DDD;  */
+  height: 20px;
+  color: #40E0D0; 
+  /*font-size: 35rpx;
+  align-items: center;
+  display: inline-block;
+  position: absolute;
+  top: 60rpx; 
+  
+  width: 500rpx;*/
+  /* height: 500rpx */
+}
+.section_sent {
+  /* padding: 20rpx 0; */
+  color: #4169E1; 
+  /* font-size: 30rpx;
+  align-items: center;
+  display: inline-block;
+  position: absolute;
+  top: 60rpx;  
+  width: 500rpx; */
+  height: 20px;
+}
+.section_sent_btn {
+  color: #FF0000; 
+  font-size: 40rpx;
+}
+.btn{
+  width: 100px;
+  height: 50px;  
+  background-color: rgba(255, 255, 255, 0);
+}
+.btn::after{ border: none;}  

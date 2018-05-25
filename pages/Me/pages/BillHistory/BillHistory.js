@@ -1,4 +1,5 @@
 // pages/Me/pages/BillHistory/BillHistory.js
+var app = getApp()
 Page({
 
   /**
@@ -9,21 +10,25 @@ Page({
     {
       time: "2018/4/20 13：00",
       success: "是",
+      imagePath: "/image/1.png",
       amount: "50"
     },
     {
       time: "2018/4/20 13：00",
       success: "是",
+      imagePath: "/image/1.png",
       amount: "50"
     },
     {
       time: "2018/4/20 13：00",
       success: "是",
+      imagePath: "/image/1.png",
       amount: "50"
     },
     {
       time: "2018/4/20 13：00",
       success: "是",
+      imagePath: "/image/1.png",
       amount: "50"
     },]
    
@@ -33,7 +38,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    app.request({
+      url: "https://theeighthday.cn/getreceivedbill",
+      success: function (res) {
+        length = res.data.length
+        console.log(res.data);
+      }
+    })
   },
 
   /**
@@ -84,4 +96,14 @@ Page({
   onShareAppMessage: function () {
   
   }
+  // sendbill: function () {
+  //   var that = this;
+  //   app.request({
+  //     url: "https://theeighthday.cn/getbill",
+  //     success: function (res) {
+  //       length = res.data.length
+  //       console.log(res.data);
+  //     }
+  //   })
+  // }
 })

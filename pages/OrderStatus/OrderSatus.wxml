@@ -1,6 +1,24 @@
-  <block>
-    <view class="empty">
-      <text class="title">暂无任何订单</text>
-      <text class="content">请您前往「送外卖」或者「接外卖」添加业务</text>
+<view class='container'> 
+  <view class='view' wx:for="{{status}}" wx:key="{{item}}">
+    <view class = "section_receive" wx:if = "{{item.style=='接的订单'}}">
+      <view class='line'>接单状态</view>
+      <view class='line'>交易开始时间 :  {{item.time_one}}</view>
+      <view class='line'>发单人姓名: {{item.name}}</view>
+      <view class='line'>地址</view>
+      <view class='line'>正在配送。。。</view>
+      <button class = "btn" bindtap='submit' size='default'>
+        <view class = "section_sent_btn">结束交易</view>
+      </button>
     </view>
-  </block>
+    <view class = "section_sent" wx:else if = "{{item.style=='发的订单'}}">
+      <view class='status'>发单状态</view>
+      <view class='line'>交易开始时间 :  {{item.time_one}}</view>
+      <view class='line'>接单人姓名: {{item.name}}</view>
+      <view class='line'>地址</view>
+      <view class='line'>正在配送。。。</view>
+      <button class = "btn" bindtap='submit' size='default'>
+        <view class = "section_sent_btn">结束交易</view>
+      </button>
+    </view> 
+  </view>
+ </view>  

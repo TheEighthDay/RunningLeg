@@ -22,6 +22,5 @@ view {
   width: 500rpx;
 }
 .fail{
-  color: #AA0000; 
-
+  color: #AA0000;
 }

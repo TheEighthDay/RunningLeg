@@ -1,3 +1,4 @@
+
   <view class='container_one'>
         <view> 
         <view class="content" >{{userInfo.nickname}}</view> 
@@ -23,7 +24,7 @@
   </view> 
 </view>
 <view class='container_three'></view>
-<view class="container_two">
+ <view class="container_two">
 <view>
   <text style="font-weight:bold"></text>
     <navigator url='../OrderStatus/OrderSatus' style='display:inline'>
@@ -35,7 +36,7 @@
       </button>
     </navigator> 
  </view>   
-</view>
+</view> 
 <view class='container_three'></view>
 <view class="container_two">
 <view>
@@ -67,7 +68,7 @@
           <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
             <navigator url="pages/{{page}}/{{page}}" class="navigator">
               <view class="navigator-text" wx:if="{{page=='BillHistory'}}">发单历史</view>
-              <view class="navigator-text" wx:else>接单历史</view>
+              <view class="navigator-text" wx:else if ="{{page=='OrderHistory'}}">接单历史</view>
               <view class="navigator-arrow"></view>
             </navigator>
           </block>

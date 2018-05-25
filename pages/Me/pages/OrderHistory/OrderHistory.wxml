@@ -1,14 +1,13 @@
-
- <view class='container'>
+<view class='container'>
   <view  class='view' wx:for="{{histories}}" wx:key="{{item}}">
     <!-- <view class="">  -->
       <image src = "{{item.imagePath}}" class='image'></image> 
-        <view class = "section">
+         <view class = "section"> 
           <view>交易结束时间 :  {{item.time}}</view>
           <view wx:if = "{{item.success=='交易成功'}}">交易成功</view>  
           <view class='fail' wx:else >交易失败</view> 
           <view wx:if = "{{item.success=='交易成功'}}">交易金额 : ￥{{item.amount}}.00</view> 
-        </view>
-    <!-- </view>   -->
+         </view> 
+     <!-- </view>    -->
   </view>
 </view> 

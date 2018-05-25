@@ -1,12 +1,13 @@
 {
   "pages":[
     "pages/Auth/Auth",
+    "pages/OrderStatus/OrderSatus",
     "pages/Firstpage/Firstpage",
     "pages/Secondpage/Secondpage",
     "pages/Me/Me",
     
     "pages/PersonalInformation/PersonalInformation",
-    "pages/OrderStatus/OrderSatus",
+    
     "pages/logs/logs",
 
     
