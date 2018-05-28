@@ -5,14 +5,21 @@
   flex-direction: column;   /*每个元素从上往下放，各占一行*/  
   /* align-items: center; */
   justify-content: space-around;  /*控制元素在垂直上的布局*/
-  background-image: url(http://p3379ff71.bkt.clouddn.com/imag.jpg);
+    /* background-image: url(http://p3379ff71.bkt.clouddn.com/59c3291643e7a_1024.jpg);   */
+  /* background-image: url(http://p3379ff71.bkt.clouddn.com/111.jpg); */
 }
 view {
   position: relative;
   height: 250px;
 }
 .line{
-  height: 30px; 
+   height: 0.001px;  
+
+     display: inline-block; 
+  /* position: absolute; */
+    margin: 50rpx;
+  top: 1rpx; 
+  width: 500px;
 }
 .status{
   height: 30px; 
@@ -22,8 +29,11 @@ view {
  .section_receive {
   /* padding: 20rpx 0; */
   /* border-bottom: 1rpx solid #DDD;  */
-  height: 20px;
-  color: #40E0D0; 
+  height: 230px;
+  width: 300px;
+  color: #F5FFFA; 
+  background-size: 300px;
+  background-image: url(http://p3379ff71.bkt.clouddn.com/59c3291e7a_1024.jpg);  
   /*font-size: 35rpx;
   align-items: center;
   display: inline-block;
@@ -43,6 +53,7 @@ view {
   top: 60rpx;  
   width: 500rpx; */
   height: 20px;
+    background-image: url(http://p3379ff71.bkt.clouddn.com/59c3291643e7a_1024.jpg);  
 }
 .section_sent_btn {
   color: #FF0000; 

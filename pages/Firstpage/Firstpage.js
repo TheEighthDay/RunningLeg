@@ -33,8 +33,8 @@ Page({
     ],
     length : 0
   },
-  
-  sendbill: function () {
+
+  getbill: function () {
     var that = this;
     app.request({
       url: "https://theeighthday.cn/createbill",
@@ -43,5 +43,6 @@ Page({
           console.log(res.data);
       }
     })
+   
   }
 })

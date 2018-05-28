@@ -11,4 +11,5 @@
     <text>设置手机号码</text>
     <input value="13536982598" bindblur="blurName" bindconfirm="changeName" auto-focus />
   </view>
+  <button bindtap='updateuser'>确认修改</button><!--元林记得美化成功后弹框提示用户-->
 </view>

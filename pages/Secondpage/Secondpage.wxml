@@ -20,4 +20,4 @@
     <input value="" bindblur="blurName" bindconfirm="changeName" auto-focus />
   </view>
 </view>
-<button type="primary" plain="true" class='button'>确定发单</button>
+<button type="primary" plain="true" class='button' bindtap='sendbill'>确定发单</button>
