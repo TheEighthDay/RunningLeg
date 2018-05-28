@@ -4,12 +4,11 @@
       <image src = "{{item.imagePath}}" class='firstpage-image'></image>
       <view class="firstpage-texts">
           <text class='firstpage-text-key'>领取时间</text>
-          <text class='firstpage-text'>2018/5/12 12:00</text>
+          <text class='firstpage-text'>{{item.hope_time}}</text>
           <text class='firstpage-text-key'>送达地点</text>
-          <text class='firstpage-text'>电子科大（沙河校区）15栋 505</text>
+          <text class='firstpage-text'>{{item.goal_address}}</text>
       </view>
     </view>
     <view class="hr1"></view>
   </navigator>
 </view>
-<button bindtap='getbill'>刷新</button>

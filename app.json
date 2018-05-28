@@ -17,9 +17,10 @@
     "pages/Me/pages/OrderHistory/OrderHistory"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#8FBC8F",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
   },
   "tabBar":{
     "color": "white",

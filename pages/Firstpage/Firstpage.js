@@ -1,48 +1,41 @@
 var app = getApp()
 Page({
   data:{
-    foodlist: [
-      {
-        id: "1",
-        imagePath: "/image/1.png",
-      },
-      {
-        id: "2",
-        imagePath: "/image/2.png",
-      },
-      {
-        id: "3",
-        imagePath: "/image/3.png",
-      },
-      {
-        id: "4",
-        imagePath: "/image/4.png",
-      },
-      {
-        id: "5",
-        imagePath: "/image/5.png",
-      },
-      {
-        id: "6",
-        imagePath: "/image/6.png",
-      },
-      {
-        id: "7",
-        imagePath: "/image/7.png",
-      }
-    ],
-    length : 0
+    foodlist: []
   },
 
-  getbill: function () {
+  onLoad: function() {
+    this.getbill(true);
+  },
+  onPullDownRefresh :function(){
+    this.getbill(true);
+  },
+  getbill: function (isFirstIn) {
     var that = this;
     app.request({
       url: "https://theeighthday.cn/getbill",
       success: function (res) {
-          length = res.data.length
+          length = res.data.length;
+          that.setData({
+            foodlist: res.data.data,
+          });
+          if(isFirstIn) {
+            that.generateRandom();
+          }
+          wx.stopPullDownRefresh();
           console.log(res.data);
       }
     })
    
-  }
+  },
+
+  generateRandom: function() {
+    var foodlist = this.data.foodlist;
+    foodlist.forEach(function(item) {
+      item.imagePath = '/image/' + Math.ceil(12 * Math.random()) + '.png';
+    });
+    this.setData({
+      foodlist: foodlist,
+    });
+  },
 })
