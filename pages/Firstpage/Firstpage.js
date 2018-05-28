@@ -33,7 +33,7 @@ Page({
     ],
     length : 0
   },
-  
+
   sendbill: function () {
     var that = this;
     app.request({
