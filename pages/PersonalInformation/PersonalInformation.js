@@ -10,6 +10,21 @@ Page({
       url: '../logs/logs'
     })
   },
+  updateuser:function (){
+    var that = this;
+    app.request({
+      url: "https://theeighthday.cn/updateuser",
+      //需要把页面用户填的信息拉过来
+      data: {
+        "address": "beijin",
+        "phonenumber":"123456",
+        "username":"book"
+      },
+      success: function (res) {
+        console.log(res.data);
+      }
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
