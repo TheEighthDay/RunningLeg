@@ -1,27 +1,67 @@
-var app = getApp()
+var app = getApp();
 Page({
   data: {
-    detail:
-    {
-      goal_address: "电子科技大学（沙河校区）15栋505",
-      send_address: "电子科技大学",
-      hope_time: "2018,4,19,12,0,0",
-      remark: "汤！！！上楼慢一点不要撒了",
-    }
+    userInfo:{
+
+    },
+    goal_address: "",
+    send_address: "",
+    hope_time: "", //记得格式转换
+    remark: "",
+  },
+  onShow : function(){
+    var app=getApp();
+    this.setData({
+      userInfo: app.globalData.userInfo
+    })
+  },
+  blurName1:function(e){
+    var that = this;
+    that.setData({
+      goal_address:e.detail.value
+    })
+  },
+  blurName2: function (e) {
+    var that = this;
+    that.setData({
+      hope_time: e.detail.value
+    })
+  },
+  blurName3: function (e) {
+    var that = this;
+    that.setData({
+      send_address: e.detail.value
+    })
+  },
+  blurName4: function (e) {
+    var that = this;
+    that.setData({
+      remark: e.detail.value
+    })
   },
   sendbill: function () {
     var that = this;
     app.request({
       url: "https://theeighthday.cn/createbill",
       data: {
-        "goal_address": that.data.detail.goal_address,
-        "hope_time": that.data.detail.hope_time,  //必须这种格式，屈萌记得把前端的时间格式转换一下
-        "send_address": that.data.detail.send_address,
-        "remark": that.data.detail.remark,
+        "goal_address": that.data.goal_address,
+        "hope_time": that.data.hope_time,  //必须这种格式，屈萌记得把前端的时间格式转换一下
+        "send_address": that.data.send_address,
+        "remark": that.data.remark,
       },
       success: function (res) {
-        if (res.data.status == 1) {
-          console.log("asda");
+        console.log(res)
+        if (res.data.success ==1) {
+          console.log("ok");
+          wx.showToast({
+            title: '成功',
+          })
+        }
+        else{
+          wx.showToast({
+            title: '失败',
+          })
+
         }
       }
     })
