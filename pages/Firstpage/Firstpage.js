@@ -34,7 +34,7 @@ Page({
     length : 0
   },
 
-  sendbill: function () {
+  getbill: function () {
     var that = this;
     app.request({
       url: "https://theeighthday.cn/getbill",

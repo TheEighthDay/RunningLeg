@@ -12,4 +12,4 @@
     <view class="hr1"></view>
   </navigator>
 </view>
-<button bindtap='sendbill'>刷新</button>
+<button bindtap='getbill'>刷新</button>
