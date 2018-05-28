@@ -13,4 +13,4 @@
   <text>{{detail.others}}</text>
   <image src='/image/line3.png' class='image'></image>
 </view>
-<button type="primary" plain="true" class='button'>确定接单</button>
+<button type="primary" plain="true" class='button' >确定接单</button> <!--接单后弹窗提醒-->

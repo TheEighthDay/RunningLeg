@@ -37,7 +37,7 @@ Page({
   getbill: function () {
     var that = this;
     app.request({
-      url: "https://theeighthday.cn/createbill",
+      url: "https://theeighthday.cn/getbill",
       success: function (res) {
           length = res.data.length
           console.log(res.data);

@@ -14,7 +14,7 @@ Page({
     var that = this;
     app.request({
       url: "https://theeighthday.cn/updateuser",
-      //需要把页面用户填的信息拉过来
+      //需要把页面用户填的信息拉过来，成功后记得弹窗提示
       data: {
         "address": "beijin",
         "phonenumber":"123456",
