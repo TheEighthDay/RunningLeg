@@ -1,7 +1,7 @@
 <view class='container'> 
   <view class='view' wx:for="{{status}}" wx:key="{{item}}">
     <view class = "section_receive" wx:if = "{{item.style=='接的订单'}}">
-      <view class='line'>接单状态</view>
+      <!-- <view class='line'>   接单状态</view> -->
       <view class='line'>交易开始时间 :  {{item.time_one}}</view>
       <view class='line'>发单人姓名: {{item.name}}</view>
       <view class='line'>地址</view>
@@ -10,8 +10,8 @@
         <view class = "section_sent_btn">结束交易</view>
       </button>
     </view>
-    <view class = "section_sent" wx:else if = "{{item.style=='发的订单'}}">
-      <view class='status'>发单状态</view>
+    <view class = "section_receive" wx:else if = "{{item.style=='发的订单'}}">
+      <!-- <view class='status'>发单状态</view> -->
       <view class='line'>交易开始时间 :  {{item.time_one}}</view>
       <view class='line'>接单人姓名: {{item.name}}</view>
       <view class='line'>地址</view>
