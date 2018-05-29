@@ -1,11 +1,11 @@
 <view class='container'>
   <view class="section">
     <text>送达地址</text>
-    <input value="" bindblur="blurName1" bindconfirm="changeName" auto-focus />
+    <input value="" bindblur="blurName1" placeholder="{{userInfo.address}}" bindconfirm="changeName" auto-focus />
   </view>
   <view class="section">
-    <text>手机号码</text>
-    <text >{{userInfo.phonenumber}}</text><!--待修改样式-->
+    <text>您的手机号码</text>
+    <input value="" bindblur="blurName5" placeholder="{{userInfo.phonenumber}}" bindconfirm="changeName" auto-focus />
   </view>
    <view class="section">
     <text>领取订单时间</text>

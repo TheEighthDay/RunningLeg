@@ -2,6 +2,9 @@ const app = getApp()
 Page({
   data: {
     userInfo: {},
+    username:"",
+    phonenumber:"",
+    address:"",
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
@@ -10,18 +13,53 @@ Page({
       url: '../logs/logs'
     })
   },
+  blurName1: function (e) {
+    var that = this;
+    that.setData({
+      username: e.detail.value
+    })
+  },
+  blurName2: function (e) {
+    var that = this;
+    that.setData({
+      address: e.detail.value
+    })
+  },
+  blurName3: function (e) {
+    var that = this;
+    that.setData({
+      phonenumber: e.detail.value
+    })
+  },
   updateuser:function (){
     var that = this;
     app.request({
       url: "https://theeighthday.cn/updateuser",
       //需要把页面用户填的信息拉过来，成功后记得弹窗提示
       data: {
-        "address": "beijin",
-        "phonenumber":"123456",
-        "username":"book"
+        "address": that.data.address,
+        "phonenumber":that.data.phonenumber,
+        "username":that.data.username
       },
       success: function (res) {
-        console.log(res.data);
+        if (res.data.success==1)
+        {
+          wx.showToast({
+            title: '成功修改,1秒后返回',
+          })
+          setTimeout(function(){
+            wx.navigateBack({
+              delta:1
+            })
+          },1000)
+        }
+        else{
+          wx.showToast({
+            title: '修改失败',
+          })
+
+        }
+        
       }
     })
   },

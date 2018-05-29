@@ -8,6 +8,7 @@ Page({
     send_address: "",
     hope_time: "", //记得格式转换
     remark: "",
+    phonenumber:"",
   },
   onShow : function(){
     var app=getApp();
@@ -39,6 +40,12 @@ Page({
       remark: e.detail.value
     })
   },
+  blurName5: function (e) {
+    var that = this;
+    that.setData({
+      phonenumber: e.detail.value
+    })
+  },
   sendbill: function () {
     var that = this;
     app.request({
@@ -48,6 +55,7 @@ Page({
         "hope_time": that.data.hope_time,  //必须这种格式，屈萌记得把前端的时间格式转换一下
         "send_address": that.data.send_address,
         "remark": that.data.remark,
+        "phonenumber": that.data.phonenumber,
       },
       success: function (res) {
         console.log(res)
