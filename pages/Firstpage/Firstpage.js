@@ -38,4 +38,10 @@ Page({
       foodlist: foodlist,
     });
   },
+  play: function (event){
+    var data = event.currentTarget.dataset;
+    console.log(data);
+    wx.navigateTo({ url: '../Detailinfo/Detailinfo?id=' + data.id + '&goal_address=' + data.goal_address + "&hope_time=" + data.hope_time + "&remark=" + data.remark
+      + '&send_address=' + data.send_address + '&send_phonenumber=' + data.send_phonenumber + '&send_username=' + data.send_username})
+  },
 })
