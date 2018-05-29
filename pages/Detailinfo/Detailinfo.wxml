@@ -1,22 +1,29 @@
 <view class='container'>
-<image src='/image/line3.png' class='image'></image>
-  <text>接单地址</text>
-  <text>{{send_address}}</text>
-  <image src='/image/line3.png' class='image'></image>
-  <text>送达地址</text>
-  <text>{{goal_address}}</text>
-  <image src='/image/line3.png' class='image'></image>
-  <text>发单人昵称</text>
-  <text>{{send_username}}</text>
-  <image src='/image/line3.png' class='image'></image>
-  <text>发单人手机号</text>
-  <text>{{send_phonenumber}}</text>
-  <image src='/image/line3.png' class='image'></image>
-  <text>希望到达接单时间</text>
-  <text>{{hope_time}}</text>
-  <image src='/image/line3.png' class='image'></image>
-  <text>备注信息</text>
-  <text>{{remark}}</text>
-  <image src='/image/line3.png' class='image'></image>
-</view>
+
+  <text class='detailinfo-text-key'>接单地址</text>
+  <text class='detailinfo-text'>{{send_address}}</text>
+  <view class="hr1"></view>
+
+  <text class='detailinfo-text-key'>送达地址</text>
+  <text class='detailinfo-text'>{{goal_address}}</text>
+  <view class="hr1"></view>
+
+  <text class='detailinfo-text-key'>发单人昵称</text>
+  <text class='detailinfo-text'>{{send_username}}</text>
+  <view class="hr1"></view>
+
+  <text class='detailinfo-text-key'>发单人手机号</text>
+  <text class='detailinfo-text'>{{send_phonenumber}}</text>
+  <view class="hr1"></view>
+
+  <text class='detailinfo-text-key'>希望到达接单时间</text>
+  <text class='detailinfo-text'>{{hope_time}}</text>
+  <view class="hr1"></view>
+
+  <text class='detailinfo-text-key'>备注信息</text>
+  <text class='detailinfo-text'>{{remark}}</text>
+  <view class="hr1"></view>
+
 <button  plain="true" class='button' bindtap="receivebill">确定接单</button> <!--接单后弹窗提醒-->
+</view>
+

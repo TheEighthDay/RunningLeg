@@ -20,7 +20,7 @@ button{
   display: block;
   margin: 10rpx;
   font-size: 30rpx;
-  color: #708090
+  color: #708090;
 }
 .firstpage-text-key{
   display: block;
