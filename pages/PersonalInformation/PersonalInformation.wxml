@@ -1,15 +1,15 @@
 <view class="container">
    <view class="section"> 
     <text>设置用户名</text>
-    <input value="{{userInfo.username}}" bindblur="blurName1" bindconfirm="changeName" auto-focus />
+    <input value="{{username}}" bindblur="blurName1" bindconfirm="changeName" auto-focus />
   </view>
   <view class="section">
     <text>设置地址</text>
-    <input value="{{userInfo.address}}" bindblur="blurName2" bindconfirm="changeName" auto-focus />
+    <input value="{{address}}" bindblur="blurName2" bindconfirm="changeName" auto-focus />
   </view>
    <view class="section">
     <text>设置手机号码</text>
-    <input value="{{userInfo.phonenumber}}" bindblur="blurName3" bindconfirm="changeName" auto-focus />
+    <input value="{{phonenumber}}" bindblur="blurName3" bindconfirm="changeName" auto-focus />
   </view>
   <button bindtap='updateuser'>确认修改</button><!--元林记得美化成功后弹框提示用户-->
 </view>

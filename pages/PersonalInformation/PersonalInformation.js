@@ -47,6 +47,13 @@ Page({
           wx.showToast({
             title: '成功修改,1秒后返回',
           })
+          app.request({
+            url: 'https://theeighthday.cn/userinfo',  //获取userinfo
+            success: function (res) {
+              app.globalData.userInfo = res.data;
+              console.log(app.globalData.userInfo)
+            }
+          })
           setTimeout(function(){
             wx.navigateBack({
               delta:1
@@ -66,6 +73,9 @@ Page({
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
+        username: app.globalData.userInfo.username,
+        address: app.globalData.userInfo.address,
+        phonenumber:app.globalData.userInfo.phonenumber,
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
