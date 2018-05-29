@@ -35,6 +35,11 @@ Page({
           wx.showToast({
             title: '成功',
           })
+          setTimeout(function(){
+          wx.navigateBack({
+            delta: 1
+          })
+          },1000)
         }
         else {
           wx.showToast({

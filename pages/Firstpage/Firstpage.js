@@ -4,7 +4,7 @@ Page({
     foodlist: []
   },
 
-  onLoad: function() {
+  onShow: function() {
     this.getbill(true);
   },
   onPullDownRefresh :function(){
