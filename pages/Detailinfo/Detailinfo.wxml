@@ -1,12 +1,18 @@
 <view class='container'>
 <image src='/image/line3.png' class='image'></image>
-  <text>发单人地址</text>
+  <text>接单地址</text>
   <text>{{send_address}}</text>
+  <image src='/image/line3.png' class='image'></image>
+  <text>送达地址</text>
+  <text>{{goal_address}}</text>
+  <image src='/image/line3.png' class='image'></image>
+  <text>发单人昵称</text>
+  <text>{{send_username}}</text>
   <image src='/image/line3.png' class='image'></image>
   <text>发单人手机号</text>
   <text>{{send_phonenumber}}</text>
   <image src='/image/line3.png' class='image'></image>
-  <text>外卖到达时间</text>
+  <text>希望到达接单时间</text>
   <text>{{hope_time}}</text>
   <image src='/image/line3.png' class='image'></image>
   <text>备注信息</text>
