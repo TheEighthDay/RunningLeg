@@ -6,7 +6,7 @@
       <view class='line'>发单人姓名: {{item.name}}</view>
       <view class='line'>地址</view>
       <view class='line'>正在配送。。。</view>
-      <button class = "btn" bindtap='submit' size='default'>
+      <button class = "btn" bindtap='confirmbill' size='default'>
         <view class = "section_sent_btn">结束交易</view>
       </button>
     </view>
@@ -16,7 +16,7 @@
       <view class='line'>接单人姓名: {{item.name}}</view>
       <view class='line'>地址</view>
       <view class='line'>正在配送。。。</view>
-      <button class = "btn" bindtap='submit' size='default'>
+      <button class = "btn" bindtap='confirmbill' size='default'>
         <view class = "section_sent_btn">结束交易</view>
       </button>
     </view> 

@@ -1,4 +1,5 @@
 // pages/OrderStatus/OrderSatus.js
+var app = getApp()
 Page({
 
   /**
@@ -6,13 +7,13 @@ Page({
    */
   data: {
     status: [
-      // {
-      //   style: "接的订单",
-      //   time_one: "2018/4/20 13：00",
-      //   name: "大麟子",
-      //   imagePath: "/image/1.png",
-      //   amount: "50"
-      // },
+      {
+        style: "接的订单",
+        time_one: "2018/4/20 13：00",
+        name: "大麟子",
+        imagePath: "/image/1.png",
+        amount: "50"
+      },
       {
         style: "发的订单",
         time_one: "2018/4/20 13：00",
@@ -77,5 +78,16 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  confirmbill: function () {
+    var that = this;
+    app.request({
+      url: "https://theeighthday.cn/confirmbill",
+      success: function (res) {
+        length = res.data.length
+        console.log(res.data);
+      }
+    })
   }
 })

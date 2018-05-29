@@ -13,11 +13,10 @@ view {
   height: 250px;
 }
 .line{
-   height: 0.001px;  
-
-     display: inline-block; 
+  height: 0.001px;  
+  display: inline-block; 
   /* position: absolute; */
-    margin: 50rpx;
+  margin: 50rpx;
   top: 1rpx; 
   width: 500px;
 }
@@ -31,9 +30,9 @@ view {
   /* border-bottom: 1rpx solid #DDD;  */
   height: 230px;
   width: 300px;
-  color: #F5FFFA; 
+  color: #000000; 
   background-size: 300px;
-  background-image: url(http://p3379ff71.bkt.clouddn.com/59c3291e7a_1024.jpg);  
+  background-image: url(http://p3379ff71.bkt.clouddn.com/59c3291e7a_14.jpg);  
   /*font-size: 35rpx;
   align-items: center;
   display: inline-block;

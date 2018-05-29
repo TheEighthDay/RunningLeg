@@ -1,4 +1,4 @@
-<view class="container">
+<!-- <view class="container">
    <view class="section"> 
     <text>设置昵称</text>
     <input value="{{userInfo.nickname}}" bindblur="blurName" bindconfirm="changeName" auto-focus />
@@ -12,3 +12,21 @@
     <input value="13536982598" bindblur="blurName" bindconfirm="changeName" auto-focus />
   </view>
 </view>
+<button type="primary" plain="true"  bindtap='sendbill'>确定发单</button> -->
+<view class='container'>
+  <view class="section">
+    <text>设置用户名</text>
+    <!-- <input value="{{userInfo.username}}" bindblur="blurName" bindconfirm="changeName" auto-focus /> -->
+    <input value="你好" bindblur="blurName" bindconfirm="changeName" auto-focus />
+  </view>
+  <view class="section">
+    <text>设置手机号码</text>
+    <!-- <input value="{{userInfo.phonenumber}}" bindblur="blurName" bindconfirm="changeName" auto-focus /> -->
+    <input value="你好" bindblur="blurName" bindconfirm="changeName" auto-focus />
+  </view>
+   <view class="section">
+    <text>设置默认地址</text>
+    <input value="地址。。。" bindblur="blurName" bindconfirm="changeName" auto-focus />
+  </view>
+</view>
+<button type="primary" plain="true" class='button' bindtap='updateuser'>修改信息</button>

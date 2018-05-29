@@ -90,6 +90,15 @@ Page({
     this.setData({
       histories: histories
     });
+  },
+  updateuser: function () {
+    var that = this;
+    app.request({
+      url: "https://theeighthday.cn/updateuser",
+      success: function (res) {
+        length = res.data.length
+        console.log(res.data);
+      }
+    })
   }
-}
-  )
+})
