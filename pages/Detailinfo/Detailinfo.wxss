@@ -1,7 +1,7 @@
 .container {
   display: flex;
   justify-content: space-around;
-  background-image: url(http://p4k6er8dp.bkt.clouddn.com/18-5-29/15298906.jpg);
+  background-image: url(http://p4k6er8dp.bkt.clouddn.com/18-5-29/78959262.jpg);
   position: fixed;
   width:100%;
   height: 100%;
@@ -16,7 +16,7 @@
 .detailinfo-text{
   margin-left: 50rpx;
   font-size: 30rpx;
-  color: #708090;
+  color: #696969;
 }
 .button {
   margin-left: 150rpx;
