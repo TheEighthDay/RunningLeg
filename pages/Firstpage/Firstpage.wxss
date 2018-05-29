@@ -20,13 +20,13 @@ button{
   display: block;
   margin: 10rpx;
   font-size: 30rpx;
-  color: #EDA741
+  color: #708090
 }
 .firstpage-text-key{
   display: block;
   margin: 10rpx;
   font-size: 35rpx;
-  color: #DAA520;
+  color:#696969;
 }
 .firstpage-texts{
   display: inline-block;
@@ -39,7 +39,7 @@ button{
   height:1rpx;
   border:none;
   border-top:1rpx 
-  solid #778899;
+  solid #D3D3D3;
 } 
 .firstpage-view {
   position: relative;

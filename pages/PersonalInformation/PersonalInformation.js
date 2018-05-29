@@ -2,6 +2,9 @@ const app = getApp()
 Page({
   data: {
     userInfo: {},
+    username:"",
+    phonenumber:"",
+    address:"",
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
@@ -10,9 +13,69 @@ Page({
       url: '../logs/logs'
     })
   },
+  blurName1: function (e) {
+    var that = this;
+    that.setData({
+      username: e.detail.value
+    })
+  },
+  blurName2: function (e) {
+    var that = this;
+    that.setData({
+      address: e.detail.value
+    })
+  },
+  blurName3: function (e) {
+    var that = this;
+    that.setData({
+      phonenumber: e.detail.value
+    })
+  },
+  updateuser:function (){
+    var that = this;
+    app.request({
+      url: "https://theeighthday.cn/updateuser",
+      //需要把页面用户填的信息拉过来，成功后记得弹窗提示
+      data: {
+        "address": that.data.address,
+        "phonenumber":that.data.phonenumber,
+        "username":that.data.username
+      },
+      success: function (res) {
+        if (res.data.success==1)
+        {
+          wx.showToast({
+            title: '成功修改,1秒后返回',
+          })
+          app.request({
+            url: 'https://theeighthday.cn/userinfo',  //获取userinfo
+            success: function (res) {
+              app.globalData.userInfo = res.data;
+              console.log(app.globalData.userInfo)
+            }
+          })
+          setTimeout(function(){
+            wx.navigateBack({
+              delta:1
+            })
+          },1000)
+        }
+        else{
+          wx.showToast({
+            title: '修改失败',
+          })
+
+        }
+        
+      }
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
+        username: app.globalData.userInfo.username,
+        address: app.globalData.userInfo.address,
+        phonenumber:app.globalData.userInfo.phonenumber,
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })

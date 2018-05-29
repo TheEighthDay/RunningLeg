@@ -1,15 +1,16 @@
 <view class='container'>
-  <navigator wx:for="{{foodlist}}" wx:key="navItems" url='/pages/Detailinfo/Detailinfo'>
+  <view wx:for="{{foodlist}}" wx:key="navItems" data-id="{{item.id}}" data-goal_address="{{item.goal_address}}" 
+  data-hope_time="{{item.hope_time}}" data-remark="{{item.remark}}" data-send_address="{{item.send_address}}" data-send_phonenumber="{{item.send_phonenumber}}" 
+  data-send_username="{{item.send_username}}" bindtap='play'>
     <view  class='firstpage-view'>
       <image src = "{{item.imagePath}}" class='firstpage-image'></image>
       <view class="firstpage-texts">
           <text class='firstpage-text-key'>领取时间</text>
-          <text class='firstpage-text'>2018/5/12 12:00</text>
+          <text class='firstpage-text'>{{item.hope_time}}</text>
           <text class='firstpage-text-key'>送达地点</text>
-          <text class='firstpage-text'>电子科大（沙河校区）15栋 505</text>
+          <text class='firstpage-text'>{{item.goal_address}}</text>
       </view>
     </view>
     <view class="hr1"></view>
-  </navigator>
+  </view>
 </view>
-<button bindtap='getbill'>刷新</button>

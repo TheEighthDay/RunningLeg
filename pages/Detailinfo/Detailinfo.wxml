@@ -1,16 +1,22 @@
 <view class='container'>
 <image src='/image/line3.png' class='image'></image>
-  <text>发单人地址</text>
-  <text>{{detail.address}}</text>
+  <text>接单地址</text>
+  <text>{{send_address}}</text>
+  <image src='/image/line3.png' class='image'></image>
+  <text>送达地址</text>
+  <text>{{goal_address}}</text>
+  <image src='/image/line3.png' class='image'></image>
+  <text>发单人昵称</text>
+  <text>{{send_username}}</text>
   <image src='/image/line3.png' class='image'></image>
   <text>发单人手机号</text>
-  <text>{{detail.phonenumber}}</text>
+  <text>{{send_phonenumber}}</text>
   <image src='/image/line3.png' class='image'></image>
-  <text>外卖到达时间</text>
-  <text>{{detail.time}}</text>
+  <text>希望到达接单时间</text>
+  <text>{{hope_time}}</text>
   <image src='/image/line3.png' class='image'></image>
   <text>备注信息</text>
-  <text>{{detail.others}}</text>
+  <text>{{remark}}</text>
   <image src='/image/line3.png' class='image'></image>
 </view>
-<button type="primary" plain="true" class='button'>确定接单</button>
+<button  plain="true" class='button' bindtap="receivebill">确定接单</button> <!--接单后弹窗提醒-->

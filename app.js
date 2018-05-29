@@ -2,6 +2,7 @@
 //app.js
 App({
   onLaunch: function () {
+    
   },
   request: function (obj) {
     var skey = wx.getStorageSync('skey');
