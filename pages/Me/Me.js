@@ -49,6 +49,9 @@ Page({
       url: '../logs/logs'
     })
   },
+  onPullDownRefresh: function () {
+    this.onLoad();
+  },
   onLoad: function () {
     var app = getApp();
     console.log(app.globalData.userInfo)
@@ -156,7 +159,6 @@ Page({
       }
     })
   },
-
   //点击缩放按钮动态请求数据
   controltap(e) {
     var that = this;
@@ -195,5 +197,6 @@ Page({
     this.setData({
       histories: histories
     });
-  }
+  },
+ 
 })

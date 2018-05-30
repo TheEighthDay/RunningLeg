@@ -9,11 +9,36 @@ Page({
     hope_time: "", //记得格式转换
     remark: "",
     phonenumber:"",
+    showtime:"",
   },
   onShow : function(){
     var app=getApp();
     this.setData({
-      userInfo: app.globalData.userInfo
+      userInfo: app.globalData.userInfo,
+      goal_address: app.globalData.userInfo.address,
+      phonenumber: app.globalData.userInfo.phonenumber,
+    })
+  },
+  bindTimeChange: function (e) {
+    var myDate=new Date();
+    var timearr = e.detail.value.split(":")
+    var time = myDate.getFullYear() + ',' + myDate.getMonth() + ',' + myDate.getDay() +','+timearr[0]+','+timearr[1]+','+'0'
+    this.setData({
+      hope_time: time,
+      showtime: timearr[0] + '时' + timearr[1] + '分'
+    })
+    console.log(this.data.showtime)
+  },
+  chooseaddress: function () {
+    var that = this;
+    wx.chooseLocation({
+      success: function (res) {
+        console.log(res);
+        that.setData({
+          send_address: res.address
+        });
+        console.log(that.data.send_address);
+      },
     })
   },
   blurName1:function(e){

@@ -6,32 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    histories:[
-    {
-      time: "2018/4/20 13：00",
-      success: "是",
-      imagePath: "/image/1.png",
-      amount: "50"
-    },
-    {
-      time: "2018/4/20 13：00",
-      success: "是",
-      imagePath: "/image/1.png",
-      amount: "50"
-    },
-    {
-      time: "2018/4/20 13：00",
-      success: "是",
-      imagePath: "/image/1.png",
-      amount: "50"
-    },
-    {
-      time: "2018/4/20 13：00",
-      success: "是",
-      imagePath: "/image/1.png",
-      amount: "50"
-    },]
-   
+    histories:[]
   },
 
   /**
@@ -40,10 +15,14 @@ Page({
   onLoad: function (options) {
     var that = this;
     app.request({
-      url: "https://theeighthday.cn/getreceivedbill",
+      url: "https://theeighthday.cn/getsentbill",
       success: function (res) {
+        console.log(res.data.data)
         length = res.data.length
-        console.log(res.data);
+        that.setData({
+          histories: res.data.data,
+        });
+        wx.stopPullDownRefresh();
       }
     })
   },
@@ -80,7 +59,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    this.onLoad();
   },
 
   /**
