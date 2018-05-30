@@ -32,7 +32,7 @@ view {
  .section_receive {
   /* padding: 20rpx 0; */
   /* border-bottom: 1rpx solid #DDD;  */
-  height: 230px;
+  height: 300px;
   width: 300px;
   color: #000000; 
   background-size: 300px;
@@ -47,16 +47,11 @@ view {
   /* height: 500rpx */
 }
 .section_sent {
-  /* padding: 20rpx 0; */
-  color: #4169E1; 
-  /* font-size: 30rpx;
-  align-items: center;
-  display: inline-block;
-  position: absolute;
-  top: 60rpx;  
-  width: 500rpx; */
-  height: 20px;
-    background-image: url(http://p3379ff71.bkt.clouddn.com/59c3291643e7a_1024.jpg);  
+  height: 250px;
+  width: 300px;
+  color: #000000; 
+  background-size: 300px;
+    background-image: url(http://p3379ff71.bkt.clouddn.com/59c3291e7a_14.jpg);  
 }
 .section_sent_btn {
   color: #FF0000; 

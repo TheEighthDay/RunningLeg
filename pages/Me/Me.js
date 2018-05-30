@@ -159,7 +159,6 @@ Page({
       }
     })
   },
-
   //点击缩放按钮动态请求数据
   controltap(e) {
     var that = this;

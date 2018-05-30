@@ -114,10 +114,13 @@ Page({
       success: function (res) {
         console.log(res)
         if (res.data.success == 1) {
-          console.log("ok");
+          console.log("成功结束订单");
           wx.showToast({
             title: '成功',
           })
+          setTimeout(function () {
+            that.onLoad()
+          }, 500)
         }
         else {
           wx.showToast({
@@ -143,6 +146,9 @@ Page({
           wx.showToast({
             title: '成功',
           })
+          setTimeout(function () {
+            that.onLoad()
+          }, 500)
         }
         else {
           wx.showToast({
