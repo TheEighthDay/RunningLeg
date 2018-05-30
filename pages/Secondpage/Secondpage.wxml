@@ -19,5 +19,6 @@
     <text>备注</text>
     <input value="" bindblur="blurName4" bindconfirm="changeName" auto-focus />
   </view>
+  <button  plain="true" class='button' bindtap='sendbill'>确定发单</button>
+
 </view>
-<button type="primary" plain="true" class='button' bindtap='sendbill'>确定发单</button>

@@ -1,33 +1,20 @@
-<!-- <view class="container">
-   <view class="section"> 
-    <text>设置用户名</text>
-    <input value="{{username}}" bindblur="blurName1" bindconfirm="changeName" auto-focus />
-  </view>
-  <view class="section">
-    <text>设置地址</text>
-    <input value="{{address}}" bindblur="blurName2" bindconfirm="changeName" auto-focus />
-  </view>
-   <view class="section">
-    <text>设置手机号码</text>
-    <input value="{{phonenumber}}" bindblur="blurName3" bindconfirm="changeName" auto-focus />
-  </view>
-</view>
-<button type="primary" plain="true"  bindtap='sendbill'>确定发单</button> -->
+
 <view class='container'>
   <view class="section">
     <text>设置用户名</text>
     <!-- <input value="{{userInfo.username}}" bindblur="blurName" bindconfirm="changeName" auto-focus /> -->
-    <input value="你好" bindblur="blurName" bindconfirm="changeName" auto-focus />
+    <input value="{{username}}" bindblur="blurName" bindconfirm="changeName" auto-focus />
   </view>
   <view class="section">
     <text>设置手机号码</text>
     <!-- <input value="{{userInfo.phonenumber}}" bindblur="blurName" bindconfirm="changeName" auto-focus /> -->
-    <input value="你好" bindblur="blurName" bindconfirm="changeName" auto-focus />
+    <input value="{{phonenumber}}" bindblur="blurName" bindconfirm="changeName" auto-focus />
   </view>
    <view class="section">
     <text>设置默认地址</text>
-    <input value="地址。。。" bindblur="blurName" bindconfirm="changeName" auto-focus />
+    <input value="{{address}}" bindblur="blurName" bindconfirm="changeName" auto-focus />
   </view>
+  <button  plain="true" class='button' bindtap='updateuser'>修改信息</button>
 </view>
-<button type="primary" plain="true" class='button' bindtap='updateuser'>修改信息</button>
+
 
