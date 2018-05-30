@@ -1,23 +1,26 @@
 <view class='container'> 
-  <view class='view' wx:for="{{status}}" wx:key="{{item}}">
-    <view class = "section_receive" wx:if = "{{item.style=='接的订单'}}">
+  <view class='view' wx:for="{{status_one}}" wx:key="{{item}}">
+    <view class = "section_receive">
       <!-- <view class='line'>   接单状态</view> -->
-      <view class='line'>交易开始时间 :  {{item.time_one}}</view>
-      <view class='line'>发单人姓名: {{item.name}}</view>
-      <view class='line'>地址</view>
+      <view class='line'>交易时间 :  {{item.hope_time}}</view>
+      <view class='line'>发单人姓名: {{item.send_username}}</view>
+      <view class='line'>地址: {{item.send_address
+}}</view>
       <view class='line'>正在配送。。。</view>
-      <button class = "btn" bindtap='confirmbill' size='default'>
-        <view class = "section_sent_btn">结束交易</view>
+      <button class = "btn" bindtap='confirmbill' id = "{{item.id}}" size='default'>
+        <view class = "section_sent_btn" >结束交易</view>
       </button>
     </view>
-    <view class = "section_receive" wx:else if = "{{item.style=='发的订单'}}">
+  </view>
+   <view class='view' wx:for="{{status_two}}" wx:key="{{item}}">
+    <view class = "section_receive" >
       <!-- <view class='status'>发单状态</view> -->
-      <view class='line'>交易开始时间 :  {{item.time_one}}</view>
+      <view class='line'>交易时间 :  {{item.time_one}}</view>
       <view class='line'>接单人姓名: {{item.name}}</view>
       <view class='line'>地址</view>
       <view class='line'>正在配送。。。</view>
-      <button class = "btn" bindtap='confirmbill' size='default'>
-        <view class = "section_sent_btn">结束交易</view>
+      <button class = "btn" bindtap='confirmbill_receive' size='default'>
+        <view class = "section_receive_btn">结束交易</view>
       </button>
     </view> 
   </view>

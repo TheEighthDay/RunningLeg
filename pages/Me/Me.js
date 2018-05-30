@@ -49,6 +49,9 @@ Page({
       url: '../logs/logs'
     })
   },
+  onPullDownRefresh: function () {
+    this.onLoad();
+  },
   onLoad: function () {
     var app = getApp();
     console.log(app.globalData.userInfo)
@@ -195,5 +198,6 @@ Page({
     this.setData({
       histories: histories
     });
-  }
+  },
+ 
 })

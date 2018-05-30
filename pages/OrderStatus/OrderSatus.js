@@ -6,29 +6,52 @@ Page({
    * 页面的初始数据
    */
   data: {
-    status: [
-      {
-        style: "接的订单",
-        time_one: "2018/4/20 13：00",
-        name: "大麟子",
-        imagePath: "/image/1.png",
-        amount: "50"
-      },
-      {
-        style: "发的订单",
-        time_one: "2018/4/20 13：00",
-        name: "大麟字",
-        imagePath: "/image/1.png",
-        amount: "50"
-      }
-    ]
+    status_one: [
+      // {
+      //   style: "接的订单",
+      //   time_one: "2018/4/20 13：00",
+      //   name: "大麟子",
+      //   imagePath: "/image/1.png",
+      //   amount: "50"
+      // },
+      // {
+      //   style: "发的订单",
+      //   time_one: "2018/4/20 13：00",
+      //   name: "大麟字",
+      //   imagePath: "/image/1.png",
+      //   amount: "50"
+      // }
+    ],
+    status_two: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    app.request({
+      url: "https://theeighthday.cn/getsendingbill",
+      success: function (res) {
+        length = res.data.length;
+        that.setData({
+          status_one: res.data.data,
+        });
+        wx.stopPullDownRefresh();
+        console.log(res.data);
+      }
+    }),
+      app.request({
+        url: "https://theeighthday.cn/getreceivingbill",
+        success: function (res) {
+          length = res.data.length;
+          that.setData({
+            status_two: res.data.data,
+          });
+          wx.stopPullDownRefresh();
+          console.log(res.data);
+        }
+      })
   },
 
   /**
@@ -80,14 +103,55 @@ Page({
   
   },
 
-  confirmbill: function () {
+  confirmbill: function (e) {
+    console.log(e.currentTarget.id)
     var that = this;
     app.request({
       url: "https://theeighthday.cn/confirmbill",
+      data: {
+        "bill_id": e.currentTarget.id,
+      },
       success: function (res) {
-        length = res.data.length
-        console.log(res.data);
+        console.log(res)
+        if (res.data.success == 1) {
+          console.log("ok");
+          wx.showToast({
+            title: '成功',
+          })
+        }
+        else {
+          wx.showToast({
+            title: '失败',
+          })
+
+        }
+      }
+    })
+  },
+  confirmbill_receive: function () {
+    var that = this;
+    app.request({
+      url: "https://theeighthday.cn/confirmbill",
+      data: {
+        "bill_id": that.data.status_two.id,
+      },
+      success: function (res) {
+        console.log(res)
+        console.log(res.data.success)
+        if (res.data.success == 1) {
+          console.log("ok");
+          wx.showToast({
+            title: '成功',
+          })
+        }
+        else {
+          wx.showToast({
+            title: '失败',
+          })
+
+        }
       }
     })
   }
+
 })

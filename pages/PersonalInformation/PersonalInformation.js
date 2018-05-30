@@ -2,11 +2,13 @@ const app = getApp()
 Page({
   data: {
     userInfo: {},
-    username:"",
-    phonenumber:"",
-    address:"",
+    username: "",
+    phonenumber: "",
+    address: "",
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    map_width: 380,
+    map_height: 380
   },
   bindViewTap: function () {
     wx.navigateTo({
@@ -31,19 +33,18 @@ Page({
       phonenumber: e.detail.value
     })
   },
-  updateuser:function (){
+  updateuser: function () {
     var that = this;
     app.request({
       url: "https://theeighthday.cn/updateuser",
       //需要把页面用户填的信息拉过来，成功后记得弹窗提示
       data: {
         "address": that.data.address,
-        "phonenumber":that.data.phonenumber,
-        "username":that.data.username
+        "phonenumber": that.data.phonenumber,
+        "username": that.data.username
       },
       success: function (res) {
-        if (res.data.success==1)
-        {
+        if (res.data.success == 1) {
           wx.showToast({
             title: '成功修改,1秒后返回',
           })
@@ -54,28 +55,29 @@ Page({
               console.log(app.globalData.userInfo)
             }
           })
-          setTimeout(function(){
+          setTimeout(function () {
             wx.navigateBack({
-              delta:1
+              delta: 1
             })
-          },1000)
+          }, 1000)
         }
-        else{
+        else {
           wx.showToast({
             title: '修改失败',
           })
 
         }
-        
+
       }
     })
   },
+  
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
         username: app.globalData.userInfo.username,
         address: app.globalData.userInfo.address,
-        phonenumber:app.globalData.userInfo.phonenumber,
+        phonenumber: app.globalData.userInfo.phonenumber,
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
@@ -99,9 +101,7 @@ Page({
           })
         }
       })
-    }
-
-  },
+    }},
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -153,15 +153,6 @@ Page({
     this.setData({
       histories: histories
     });
-  },
-  updateuser: function () {
-    var that = this;
-    app.request({
-      url: "https://theeighthday.cn/updateuser",
-      success: function (res) {
-        length = res.data.length
-        console.log(res.data);
-      }
-    })
   }
-})
+}
+)

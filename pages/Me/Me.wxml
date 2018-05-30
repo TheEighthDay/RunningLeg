@@ -11,9 +11,9 @@
  <view>
     <text style="font-weight:bold"></text>
     <navigator url='../PersonalInformation/PersonalInformation' style='display:inline'>
-      <button class="free-btn-bordernone">
+      <button class="free-btn-bordernone" bindtap='onPullDownRefresh'>
       <view class='userinfo-avat'>
-        <view>个人信息</view>
+        <view >个人信息</view>
         <view class='section'>
         <text wx:if = "{{userInfo.phonenumber==null}}">未完善信息</text>
         </view>

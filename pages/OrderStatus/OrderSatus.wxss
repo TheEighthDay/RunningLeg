@@ -19,6 +19,10 @@ view {
   margin: 50rpx;
   top: 1rpx; 
   width: 500px;
+  /* display: block;
+  margin: 10rpx; */
+  font-size: 30rpx;
+  color:#696969;
 }
 .status{
   height: 30px; 
