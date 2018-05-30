@@ -1,37 +1,8 @@
 // pages/Me/pages/OrderHistory/OrderHistory.js
 var app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    histories: [
-      {
-        time: "2018/4/20 13：00",
-        success: '交易成功',
-        imagePath: "/image/1.png",
-        amount: "50"
-      },
-      {
-        time: "2018/4/20 13：00",
-        success: null ,
-        imagePath: "/image/1.png",
-        amount: "50"
-      },
-      {
-        time: "2018/4/20 13：00",
-        success: "交易成功" ,
-        imagePath: "/image/1.png",
-        amount: "40"
-      },
-      {
-        time: "2018/4/20 13：00",
-        success: "交易失败",
-        imagePath: "/image/1.png",
-        amount: "50"
-      },]
-
+    histories: []
   },
 
   /**
@@ -42,12 +13,16 @@ Page({
     app.request({
       url: "https://theeighthday.cn/getsentbill",
       success: function (res) {
+        console.log(res.data.data)
         length = res.data.length
-        console.log(res.data);
+        that.setData({
+          histories: res.data.data,
+        });
+        wx.stopPullDownRefresh();
       }
     })
   },
-
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
