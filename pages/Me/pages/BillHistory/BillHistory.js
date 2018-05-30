@@ -15,7 +15,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     app.request({
-      url: "https://theeighthday.cn/getreceivedbill",
+      url: "https://theeighthday.cn/getsentbill",
       success: function (res) {
         console.log(res.data.data)
         length = res.data.length
@@ -59,7 +59,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    this.onLoad();
   },
 
   /**
