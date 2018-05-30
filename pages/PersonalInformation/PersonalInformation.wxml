@@ -1,31 +1,17 @@
-<view class="container">
-   <view class="section"> 
+<view class='container'>
+  <view class="section">
     <text>设置用户名</text>
-    <input value="{{username}}" bindblur="blurName1" bindconfirm="changeName" auto-focus />
+    <!-- <input value="{{userInfo.username}}" bindblur="blurName" bindconfirm="changeName" auto-focus /> -->
+    <input value="{{username}}" bindblur="blurName" bindconfirm="changeName" auto-focus />
   </view>
   <view class="section">
-    <text>设置地址</text>
-    <input value="{{address}}" bindblur="blurName2" bindconfirm="changeName" auto-focus />
+    <text>设置手机号码</text>
+    <!-- <input value="{{userInfo.phonenumber}}" bindblur="blurName" bindconfirm="changeName" auto-focus /> -->
+    <input value="{{phonenumber}}" bindblur="blurName" bindconfirm="changeName" auto-focus />
   </view>
    <view class="section">
-    <text>设置手机号码</text>
-    <input value="{{phonenumber}}" bindblur="blurName3" bindconfirm="changeName" auto-focus />
+    <text>设置默认地址</text>
+    <input value="{{address}}" bindblur="blurName" bindconfirm="changeName" auto-focus />
   </view>
-  <button bindtap='updateuser'>确认修改</button>
-  
-
-<map id="map4select"
- longitude="{{longitude}}" latitude="{{latitude}}" 
- markers="{{markers}}"
- scale="20" 
- style="width:{{map_width}}px;height:{{map_height}}px"
- bindregionchange="regionchange"
- controls="{{controls}}">
-</map>
-
-
-
-
-
+  <button  plain="true" class='button' bindtap='updateuser'>修改信息</button>
 </view>
-
