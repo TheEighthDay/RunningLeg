@@ -33,6 +33,17 @@ Page({
       phonenumber: e.detail.value
     })
   },
+  chooseaddress:function(){
+    var that=this;
+    wx.chooseLocation({
+      success: function(res) {
+        console.log(res);
+        that.setData({
+          address:res.address
+        })
+      },
+    })
+  },
   updateuser: function () {
     var that = this;
     app.request({
