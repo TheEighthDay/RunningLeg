@@ -27,7 +27,6 @@ App({
           }
         }
       })
-      
     };
     // setInterval(call,2000);
   },
@@ -46,5 +45,4 @@ App({
     sendingbill_id:null,
     sendingtime:{}
   }
-
 })

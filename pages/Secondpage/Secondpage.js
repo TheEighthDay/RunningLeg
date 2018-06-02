@@ -102,9 +102,17 @@ Page({
           })
         }
         else{
-          wx.showToast({
-            title: '失败',
-          })
+          if (res.data.msg){
+            wx.showToast({
+              title: '未完成订单不能超过三个',
+            })
+
+          }else{
+            wx.showToast({
+              title: '失败',
+            })
+          }
+         
 
         }
       }
