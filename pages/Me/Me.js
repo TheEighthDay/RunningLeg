@@ -52,6 +52,17 @@ Page({
   onPullDownRefresh: function () {
     this.onLoad();
   },
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '高校即时跑腿了解一下？',
+      path: '/pages/Firstpage',
+      imageUrl: '/logo.jpg',
+    }
+  },
   onLoad: function () {
     var app = getApp();
     console.log(app.globalData.userInfo)
