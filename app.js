@@ -2,7 +2,6 @@
 //app.js
 App({
   onLaunch: function () {
-    
   },
   request: function (obj) {
     var skey = wx.getStorageSync('skey');
@@ -14,6 +13,9 @@ App({
     wx.request(obj)
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    sendingbill_id:null,
+    sendingtime:{}
   }
+
 })

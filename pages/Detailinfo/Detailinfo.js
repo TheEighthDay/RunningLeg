@@ -33,7 +33,7 @@ Page({
         if (res.data.success == 1) {
           console.log("ok");
           wx.showToast({
-            title: '接单成功',
+            title: '成功',
           })
           setTimeout(function(){
           wx.navigateBack({
@@ -43,7 +43,7 @@ Page({
         }
         else {
           wx.showToast({
-            title: '接单失败',
+            title: '失败',
           })
 
         }

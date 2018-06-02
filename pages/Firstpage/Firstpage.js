@@ -6,6 +6,7 @@ Page({
 
   onShow: function() {
     this.getbill(true);
+    
   },
   onPullDownRefresh :function(){
     this.getbill(true);

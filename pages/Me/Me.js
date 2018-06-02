@@ -82,15 +82,6 @@ Page({
         }
       })
     }
-
-
-
-
-
-
-
-
-
     var _this = this;
 
     wx.getSystemInfo({
