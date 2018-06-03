@@ -1,13 +1,8 @@
-// pages/Me/pages/OrderHistory/OrderHistory.js
 var app = getApp()
 Page({
   data: {
     histories: []
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     var that = this;
     app.request({

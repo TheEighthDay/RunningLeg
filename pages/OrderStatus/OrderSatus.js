@@ -1,27 +1,8 @@
-// pages/OrderStatus/OrderSatus.js
 var app = getApp()
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-    status_one: [
-      // {
-      //   style: "接的订单",
-      //   time_one: "2018/4/20 13：00",
-      //   name: "大麟子",
-      //   imagePath: "/image/1.png",
-      //   amount: "50"
-      // },
-      // {
-      //   style: "发的订单",
-      //   time_one: "2018/4/20 13：00",
-      //   name: "大麟字",
-      //   imagePath: "/image/1.png",
-      //   amount: "50"
-      // }
-    ],
+    status_one: [],
     status_two: [],
   },
 
@@ -154,7 +135,6 @@ Page({
           wx.showToast({
             title: '失败',
           })
-
         }
       }
     })
