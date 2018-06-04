@@ -15,22 +15,10 @@ Page({
       url: '../logs/logs'
     })
   },
-  blurName1: function (e) {
-    var that = this;
-    that.setData({
-      username: e.detail.value
-    })
-  },
-  blurName2: function (e) {
-    var that = this;
-    that.setData({
-      address: e.detail.value
-    })
-  },
-  blurName3: function (e) {
-    var that = this;
-    that.setData({
-      phonenumber: e.detail.value
+  handleBlur: function (e) {
+    const type = e.currentTarget.dataset.type;
+    this.setData({
+      [type]: e.detail.value
     })
   },
   chooseaddress:function(){
@@ -121,9 +109,9 @@ Page({
       hasUserInfo: true
     })
   },
-  blurName: function (e) {
-    this.setData({ name: wx.getStorageSync('name') });
-  },
+  // blurName: function (e) {
+  //   this.setData({ name: wx.getStorageSync('name') });
+  // },
 
   changeName: function (e) {
     var name = e.detail.value.trim();

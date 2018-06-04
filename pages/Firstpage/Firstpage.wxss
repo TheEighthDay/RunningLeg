@@ -1,3 +1,4 @@
+@import "/utils/font.wxss";
 .container {
   background-color: #fff;
   
@@ -23,10 +24,11 @@ button{
   color: #708090;
 }
 .firstpage-text-key{
+  font-family: "iconfont" !important; 
   display: block;
   margin: 10rpx;
   font-size: 35rpx;
-  color:#696969;
+  color:#000;
 }
 .firstpage-texts{
   display: inline-block;

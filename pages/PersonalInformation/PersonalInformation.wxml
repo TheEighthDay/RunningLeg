@@ -1,18 +1,16 @@
 <view class='container'>
   <view class="section">
-    <text>设置用户名</text>
-    <!-- <input value="{{userInfo.username}}" bindblur="blurName" bindconfirm="changeName" auto-focus /> -->
-    <input value="{{username}}" bindblur="blurName1" bindconfirm="changeName" auto-focus />
+    <input placeholder="设置用户名" value="{{username}}" bindblur="handleBlur" data-type="username" bindconfirm="changeName" auto-focus />
   </view>
+
   <view class="section">
-    <text>设置手机号码</text>
-    <!-- <input value="{{userInfo.phonenumber}}" bindblur="blurName" bindconfirm="changeName" auto-focus /> -->
-    <input value="{{phonenumber}}" bindblur="blurName3" bindconfirm="changeName" auto-focus />
+    <input placeholder="设置手机号码" value="{{phonenumber}}" bindblur="handleBlur" data-type="phonenumber" bindconfirm="changeName" auto-focus />
   </view>
-   <view class="section">
-    <text>设置默认地址</text>
-    <input value="{{address}}" bindblur="blurName2" bindconfirm="changeName" auto-focus />
+
+  <view class="section">
+    <input placeholder="设置收货地址" value="{{address}}" bindblur="handleBlur" data-type="address" bindconfirm="changeName" auto-focus />
   </view>
+
   <view>
   <text bindtap="chooseaddress" >地图选取  </text>
   <icon type="search" size="15" color='green'bindtap="chooseaddress"/>

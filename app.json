@@ -1,48 +1,48 @@
 {
-  "pages":[
+  "pages": [
     "pages/Auth/Auth",
     "pages/OrderStatus/OrderSatus",
     "pages/Firstpage/Firstpage",
     "pages/Secondpage/Secondpage",
     "pages/Me/Me",
-    
     "pages/PersonalInformation/PersonalInformation",
-    
     "pages/logs/logs",
-
-    
     "pages/Detailinfo/Detailinfo",
     "pages/Wallet/Wallet",
     "pages/Me/pages/BillHistory/BillHistory",
     "pages/Me/pages/OrderHistory/OrderHistory"
   ],
-  "window":{
+  "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#8FBC8F",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   },
-  "tabBar":{
+  "tabBar": {
     "color": "white",
     "selectedColor": "#000000",
     "backgroundColor": "#8FBC8F",
     "borderStyle": "white",
     "position": "bottom",
-    "list":[{
-      "pagePath": "pages/Firstpage/Firstpage",
-      "text": "接订单",
-      "iconPath": "/image/send.png",
-      "selectedIconPath": "/image/send.png"
-    },{
-      "pagePath": "pages/Secondpage/Secondpage",
-      "text": "发订单",
-      "iconPath": "/image/receive.png",
-      "selectedIconPath": "/image/receive.png"
-    },{
-      "pagePath": "pages/Me/Me",
-      "text": "个人信息",
-      "iconPath": "/image/man.png",
-      "selectedIconPath": "/image/man.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/Firstpage/Firstpage",
+        "text": "接订单",
+        "iconPath": "/image/send_unselected.png",
+        "selectedIconPath": "/image/send.png"
+      },
+      {
+        "pagePath": "pages/Secondpage/Secondpage",
+        "text": "发订单",
+        "iconPath": "/image/receive_unselected.png",
+        "selectedIconPath": "/image/receive.png"
+      },
+      {
+        "pagePath": "pages/Me/Me",
+        "text": "个人信息",
+        "iconPath": "/image/man_unselected.png",
+        "selectedIconPath": "/image/man.png"
+      }
+    ]
   }
 }

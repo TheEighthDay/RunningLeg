@@ -19,6 +19,9 @@ Page({
       phonenumber: app.globalData.userInfo.phonenumber,
     })
   },
+  handleInput: function(e) {
+    console.log(e);
+  },
   bindTimeChange: function (e) {
     var myDate=new Date();
     var timearr = e.detail.value.split(":")

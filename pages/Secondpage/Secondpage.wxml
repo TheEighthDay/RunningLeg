@@ -1,36 +1,32 @@
 <view class='container'>
   <view class="section">
     <text>送达地址</text>
-    <input value="" bindblur="blurName1" placeholder="{{goal_address}}" bindconfirm="changeName" auto-focus />
+    <input placeholder="送达地址" bindblur="blurName1" value="{{goal_address}}" bindconfirm="changeName" auto-focus bindinput="handleInput" />
   </view>
+  
   <view class="section">
-    <text>您的手机号码</text>
-    <input value="" bindblur="blurName5" placeholder="{{phonenumber}}" bindconfirm="changeName" auto-focus />
+    <text>手机</text>
+    <input placeholder="您的手机号码" bindblur="blurName5" value="{{phonenumber}}" bindconfirm="changeName" auto-focus />
   </view>
-  <view class="section">
-    <text>希望订单自动截止时间</text>
-     <input value=""  placeholder="{{showtime}}" bindconfirm="changeName" auto-focus />
-  </view>
-  <view >  
-      <picker mode="time"  start="00:00" end="23:59" bindchange="bindTimeChange">
-      <view>
-        时间选取
-        <icon type="search" size="15" color='green'/>
-      </view> 
-      </picker>
-  </view> 
-  <view class="section">
-    <text>取货地点</text>
-    <input value="" bindblur="blurName3" bindconfirm="changeName" placeholder="{{send_address}}" auto-focus />
-  </view>
-  <view>
-    <text bindtap="chooseaddress" >地图选取  </text>
-    <icon type="search" size="15" color='green'bindtap="chooseaddress"/>
-  </view>
-   <view class="section">
-    <text>备注</text>
-    <input value="" bindblur="blurName4" bindconfirm="changeName" placeholder="{{remark}}" auto-focus />
-  </view>
-  <button  plain="true" class='button' bindtap='sendbill'>确定发单</button>
 
+  <view class="section">
+    <text>接单时间</text>
+    <input placeholder="希望接单时间"  value="{{showtime}}" bindconfirm="changeName" auto-focus />
+    <picker mode="time" class="icon" start="00:00" end="23:59" bindchange="bindTimeChange">
+     <icon type="search" />
+    </picker>
+  </view> 
+
+  <view class="section">
+    <text>取货地址</text>
+    <input placeholder="取货地址" bindblur="blurName3" bindconfirm="changeName" value="{{send_address}}" auto-focus />
+    <icon type="search"  class="icon" bindtap="chooseaddress"/>
+  </view>
+
+  <view class="section">
+    <text>备注</text>
+    <input placeholder="备注" bindblur="blurName4" bindconfirm="changeName" value="{{remark}}" auto-focus />
+  </view>
+
+  <button  plain="true" class='button' bindtap='sendbill'>确定发单</button>
 </view>
