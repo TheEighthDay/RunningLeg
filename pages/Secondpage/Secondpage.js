@@ -19,18 +19,31 @@ Page({
       phonenumber: app.globalData.userInfo.phonenumber,
     })
   },
+
   handleInput: function(e) {
     console.log(e);
+  },
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '高校即时跑腿了解一下？',
+      path: '/pages/Firstpage',
+      imageUrl: '/logo.jpg',
+    }
+
   },
   bindTimeChange: function (e) {
     var myDate=new Date();
     var timearr = e.detail.value.split(":")
-    var time = myDate.getFullYear() + ',' + myDate.getMonth() + ',' + myDate.getDay() +','+timearr[0]+','+timearr[1]+','+'0'
+    var time = myDate.getFullYear() + ',' + (myDate.getMonth()+1) + ',' + myDate.getDate() +','+timearr[0]+','+timearr[1]+','+'0'
     this.setData({
       hope_time: time,
       showtime: timearr[0] + '时' + timearr[1] + '分'
     })
-    console.log(this.data.showtime)
+    console.log(this.data.hope_time)
   },
   chooseaddress: function () {
     var that = this;
@@ -94,9 +107,17 @@ Page({
           })
         }
         else{
-          wx.showToast({
-            title: '失败',
-          })
+          if (res.data.msg){
+            wx.showToast({
+              title: '未完成订单不能超过三个',
+            })
+
+          }else{
+            wx.showToast({
+              title: '失败',
+            })
+          }
+         
 
         }
       }

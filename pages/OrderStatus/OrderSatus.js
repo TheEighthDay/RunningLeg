@@ -1,27 +1,8 @@
-// pages/OrderStatus/OrderSatus.js
 var app = getApp()
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-    status_one: [
-      // {
-      //   style: "接的订单",
-      //   time_one: "2018/4/20 13：00",
-      //   name: "大麟子",
-      //   imagePath: "/image/1.png",
-      //   amount: "50"
-      // },
-      // {
-      //   style: "发的订单",
-      //   time_one: "2018/4/20 13：00",
-      //   name: "大麟字",
-      //   imagePath: "/image/1.png",
-      //   amount: "50"
-      // }
-    ],
+    status_one: [],
     status_two: [],
   },
 
@@ -33,25 +14,23 @@ Page({
     app.request({
       url: "https://theeighthday.cn/getsendingbill",
       success: function (res) {
-        length = res.data.length;
+        that.setData({
+          status_two: res.data.data,
+        });
+        wx.stopPullDownRefresh();
+        console.log(res.data);
+      }
+    }),
+    app.request({
+      url: "https://theeighthday.cn/getreceivingbill",
+      success: function (res) {
         that.setData({
           status_one: res.data.data,
         });
         wx.stopPullDownRefresh();
         console.log(res.data);
       }
-    }),
-      app.request({
-        url: "https://theeighthday.cn/getreceivingbill",
-        success: function (res) {
-          length = res.data.length;
-          that.setData({
-            status_two: res.data.data,
-          });
-          wx.stopPullDownRefresh();
-          console.log(res.data);
-        }
-      })
+    })
   },
 
   /**
@@ -104,7 +83,8 @@ Page({
   },
 
   confirmbill: function (e) {
-    console.log(e.currentTarget.id)
+    console.log(e.currentTarget.id);
+    console.log("aaaa");
     var that = this;
     app.request({
       url: "https://theeighthday.cn/confirmbill",
@@ -131,16 +111,17 @@ Page({
       }
     })
   },
-  confirmbill_receive: function () {
+  confirmbill_receive: function (e) {
+    console.log(e.currentTarget.id);
+    console.log("bbbb");
     var that = this;
     app.request({
       url: "https://theeighthday.cn/confirmbill",
       data: {
-        "bill_id": that.data.status_two.id,
+        "bill_id": e.currentTarget.id,
       },
       success: function (res) {
         console.log(res)
-        console.log(res.data.success)
         if (res.data.success == 1) {
           console.log("ok");
           wx.showToast({
@@ -154,7 +135,6 @@ Page({
           wx.showToast({
             title: '失败',
           })
-
         }
       }
     })

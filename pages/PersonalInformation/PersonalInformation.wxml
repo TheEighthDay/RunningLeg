@@ -12,7 +12,7 @@
   </view>
 
   <view>
-  <text bindtap="chooseaddress" >地图选取  </text>
+  <text bindtap="chooseaddress" >地图选取</text>
   <icon type="search" size="15" color='green'bindtap="chooseaddress"/>
   </view>
   <button  plain="true" class='button' bindtap='updateuser'>修改信息</button>

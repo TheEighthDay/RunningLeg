@@ -1,15 +1,10 @@
 <view class='container'>
   <view  class='view' wx:for="{{histories}}" wx:key="{{item}}">
-       <view class = "section">  
-    
+      <view class = "section">  
         <view class = "line">交易结束时间 :  {{item.finished_at}}</view>
-        <!-- <view wx:if = "{{item.success==1}}">交易成功</view>  
-        <view class='fail' wx:else >交易失败</view> 
-        <view wx:if = "{{item.success==1}}">交易金额 : ￥{{item.goal_address}}.00</view>  -->
         <view class = "line">发货地址 :  {{item.send_address}}</view>
         <view class = "line">送达地址 :  {{item.send_address}}</view>
-
         <view class = "line">交易发单者 :  {{item.send_username}}</view>
-       </view>  
+      </view>  
   </view>
 </view> 

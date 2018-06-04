@@ -16,6 +16,7 @@
   <text class='detailinfo-text'>{{send_phonenumber}}</text>
   <view class="hr1"></view>
 
+
   <text class='detailinfo-text-key'>希望接单时间</text>
   <text class='detailinfo-text'>{{hope_time}}</text>
   <view class="hr1"></view>
