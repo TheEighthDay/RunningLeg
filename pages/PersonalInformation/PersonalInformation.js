@@ -45,7 +45,7 @@ Page({
       success: function (res) {
         if (res.data.success == 1) {
           wx.showToast({
-            title: '成功修改,1秒后返回',
+            title: '修改成功',
           })
           app.request({
             url: 'https://theeighthday.cn/userinfo',  //获取userinfo

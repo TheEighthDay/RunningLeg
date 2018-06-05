@@ -1,79 +1,79 @@
-
-  <view class='container_one'>
-        <view> 
-        <view class="content" >{{userInfo.nickname}}</view> 
-        <view class="content" >{{userInfo.phonenumber}}</view>
-        </view> 
-        <image class="userinfo-a"  src="{{userInfo.avatarurl}}">
-        </image>
-</view>  
-<view class="container_two">
- <view>
-    <text style="font-weight:bold"></text>
-    <navigator url='../PersonalInformation/PersonalInformation' style='display:inline'>
-      <button class="free-btn-bordernone" bindtap='onPullDownRefresh'>
-      <view class='userinfo-avat'>
-        <view >个人信息</view>
-        <view class='section'>
-        <text wx:if = "{{userInfo.phonenumber==null}}">未完善信息</text>
-        </view>
-        <view class= "center"><image class="image" src="/image/detail.png"></image></view>
-      </view>
-      </button>
-    </navigator>
-  </view> 
-</view>
-<view class='container_three'></view>
- <view class="container_two">
-<view>
-  <text style="font-weight:bold"></text>
-    <navigator url='../OrderStatus/OrderSatus' style='display:inline'>
-      <button class="free-btn-bordernone">
-      <view class='userinfo-avat'>
-        <view>订单状态</view>
-        <view class= "center"><image class="image" src="/image/order.png"></image></view>
-      </view>
-      </button>
-    </navigator> 
- </view>   
-</view> 
-<view class='container_three'></view>
-<view class="container_two">
-<view>
-    <text style="font-weight:bold"></text>
-    <navigator url='../Wallet/Wallet' style='display:inline'>
-       <button class="free-btn-bordernone"> 
-      <view class='userinfo-avat'>
-        <view>钱包</view>
-        <view class= "center"><image class="image" src="/image/wallet.png"></image></view>
-      </view>
-      </button>  
-    </navigator>
-</view>
-</view>  
-<view class='container_three'></view>
-<view class="kind-list">
-  <block wx:for-items="{{histories}}" wx:key="{{item.id}}"> 
-    <view class="kind-list-item"> 
-      <view id="{{item.id}}"  bindtap="kindToggle">
-       <button class="free-btn-bordernone">
-      <view class='userinfo-avat'>
-        <view>历史记录</view>
-        <view class= "center"><image class="image" src="/image/history.png"></image></view>
-      </view>
-      </button>
-      </view>  
-      <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
-        <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
-          <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
-            <navigator url="pages/{{page}}/{{page}}" class="navigator">
-              <view class="navigator-text" wx:if="{{page=='BillHistory'}}">发单历史</view>
-              <view class="navigator-text" wx:else if ="{{page=='OrderHistory'}}">接单历史</view>
-              <view class="navigator-arrow"></view>
-            </navigator>
-          </block>
-        </view>
+<navigator url='../PersonalInformation/PersonalInformation' style='display:inline'>
+<view class='top-div'>
+      <image class="userinfo-a"  src="{{userInfo.avatarurl}}"></image>
+      <view> 
+          <view class="content-name" >{{userInfo.nickname}}</view> 
+          <view class="content-pnum" >{{userInfo.phonenumber}}</view>
       </view> 
-    </view>
-  </block>
+     
+</view>
+</navigator>
+
+<view class='bottom-div'>
+        <view class="info-div">
+            <navigator url='../PersonalInformation/PersonalInformation' style='display:inline' >
+              <button class="free-btn-bordernone" >
+              <view class='userinfo-avat'>
+                <image class="image center" src="/image/detail.png"></image>
+                <view class='text'>账号信息</view>
+                <view class='section'>
+                <text wx:if = "{{userInfo.phonenumber==null}}">未完善信息</text>
+                </view>
+                <image class="image center right" src="/image/arrow-right.png"></image>
+              </view>
+              </button>
+            </navigator>
+        </view>
+
+
+        <view class="info-div">
+            <navigator url='../OrderStatus/OrderSatus' style='display:inline'>
+              <button class="free-btn-bordernone">
+              <view class='userinfo-avat'>
+                <image class="image center" src="/image/order.png"></image>
+                <view class='text'>订单状态</view>
+                <image class="image center right" src="/image/arrow-right.png"></image>
+              </view>
+              </button>
+            </navigator> 
+        </view>   
+
+
+
+        <view class="info-div">
+            <navigator url='../Wallet/Wallet' style='display:inline'>
+              <button class="free-btn-bordernone"> 
+              <view class='userinfo-avat'>
+               <image class="image center" src="/image/wallet.png"></image>
+                <view class='text'>钱包</view>
+                <image class="image center right" src="/image/arrow-right.png"></image>
+              </view>
+              </button>  
+            </navigator>
+        </view>
+
+        <view class="info-div" wx:for-items="{{histories}}" wx:key="{{item.id}}">
+            <view class="kind-list-item"> 
+              <view id="{{item.id}}"  bindtap="kindToggle">
+              <button class="free-btn-bordernone">
+              <view class='userinfo-avat'>
+                <image class="image center" src="/image/history.png"></image>
+                <view class='text'>历史记录</view>
+                <image class="image center right" src="/image/arrow-right.png"></image>
+              </view>
+              </button>
+              </view>  
+              <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+                <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+                  <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
+                    <navigator url="pages/{{page}}/{{page}}" class="navigator">
+                      <view class="navigator-text" wx:if="{{page=='BillHistory'}}">发单历史</view>
+                      <view class="navigator-text" wx:else if ="{{page=='OrderHistory'}}">接单历史</view>
+                      <view class="navigator-arrow"></view>
+                    </navigator>
+                  </block>
+                </view>
+              </view> 
+            </view>
+        </view>
 </view>

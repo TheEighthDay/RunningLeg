@@ -1,19 +1,22 @@
-<view class='container'>
-  <view class="section">
-    <input placeholder="设置用户名" value="{{username}}" bindblur="handleBlur" data-type="username" bindconfirm="changeName" auto-focus />
-  </view>
+<view style='height: 100%;'>
+  <view class='container2'>
+    <view style='margin-top: 30rpx;'>
+      <view class="section">
+        <text>用户名称</text>
+        <input placeholder="设置用户名" value="{{username}}" bindblur="handleBlur" data-type="username" bindconfirm="changeName" />
+      </view>
 
-  <view class="section">
-    <input placeholder="设置手机号码" value="{{phonenumber}}" bindblur="handleBlur" data-type="phonenumber" bindconfirm="changeName" auto-focus />
-  </view>
+      <view class="section">
+        <text>手机号码</text>
+        <input placeholder="设置手机号码" value="{{phonenumber}}" bindblur="handleBlur" data-type="phonenumber" bindconfirm="changeName" />
+      </view>
 
-  <view class="section">
-    <input placeholder="设置收货地址" value="{{address}}" bindblur="handleBlur" data-type="address" bindconfirm="changeName" auto-focus />
-  </view>
+      <view class="section">
+        <text>收货地址</text>
+        <input placeholder="设置收货地址" value="{{address}}" bindblur="handleBlur" data-type="address" bindconfirm="changeName" bindtap="chooseaddress"/>
+      </view>
+    </view>
 
-  <view>
-  <text bindtap="chooseaddress" >地图选取</text>
-  <icon type="search" size="15" color='green'bindtap="chooseaddress"/>
+    <button  plain="true" class='button' bindtap='updateuser' style='margin-bottom: 100rpx;'>完成</button>
   </view>
-  <button  plain="true" class='button' bindtap='updateuser'>修改信息</button>
 </view>

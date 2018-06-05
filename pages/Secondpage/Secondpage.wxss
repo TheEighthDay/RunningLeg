@@ -3,8 +3,6 @@ page {
 }
 .container {
   padding-top: 70rpx;
-  display: flex;
-  justify-content: space-around;
   background-image: url(http://p4k6er8dp.bkt.clouddn.com/18-5-29/78959262.jpg);
   width:100%;
   height: 100%;
@@ -12,18 +10,16 @@ page {
 } 
 .section {
   display:flex;
-  justify-content:space-between;
   border-bottom: 1rpx solid #DDD;
   margin-left: 70rpx;
   margin-right: 70rpx;
 }
 .section input {
   font-size: 35rpx;
-  width: 300rpx;
+  width: 70%;
   color:#000;
-  text-align: right;
+  margin-left: 10rpx;
 }
-
 .button {
   margin-bottom: 150rpx;
   margin-left: 150rpx;

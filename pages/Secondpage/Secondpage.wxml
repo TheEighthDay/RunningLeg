@@ -1,31 +1,29 @@
 <view class='container'>
   <view class="section">
     <text>送达地址</text>
-    <input placeholder="送达地址" bindblur="blurName1" value="{{goal_address}}" bindconfirm="changeName" auto-focus bindinput="handleInput" />
+    <input placeholder="送达地址" bindblur="blurName1" value="{{goal_address}}" bindconfirm="changeName" focus bindinput="handleInput" />
   </view>
   
   <view class="section">
-    <text>手机</text>
-    <input placeholder="您的手机号码" bindblur="blurName5" value="{{phonenumber}}" bindconfirm="changeName" auto-focus />
+    <text>手机号码</text>
+    <input placeholder="您的手机号码" bindblur="blurName5" value="{{phonenumber}}" bindconfirm="changeName" focus />
   </view>
 
   <view class="section">
     <text>接单时间</text>
-    <input placeholder="希望接单时间"  value="{{showtime}}" bindconfirm="changeName" auto-focus />
     <picker mode="time" class="icon" start="00:00" end="23:59" bindchange="bindTimeChange">
-     <icon type="search" />
+     <input placeholder="希望接单时间"  value="{{showtime}}" bindconfirm="changeName" focus />
     </picker>
   </view> 
 
   <view class="section">
     <text>取货地址</text>
-    <input placeholder="取货地址" bindblur="blurName3" bindconfirm="changeName" value="{{send_address}}" auto-focus />
-    <icon type="search"  class="icon" bindtap="chooseaddress"/>
+    <input placeholder="跑腿人员取货地址" bindblur="blurName3" bindconfirm="changeName" value="{{send_address}}" focus bindtap="chooseaddress"/>
   </view>
 
   <view class="section">
-    <text>备注</text>
-    <input placeholder="备注" bindblur="blurName4" bindconfirm="changeName" value="{{remark}}" auto-focus />
+    <text>备注信息</text>
+    <input placeholder="选填备注信息" bindblur="blurName4" bindconfirm="changeName" value="{{remark}}" focus />
   </view>
 
   <button  plain="true" class='button' bindtap='sendbill'>确定发单</button>
