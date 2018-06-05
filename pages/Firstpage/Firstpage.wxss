@@ -43,3 +43,10 @@ button{
 .firstpage-view {
   position: relative;
 }
+.add_icon{
+  position:fixed;
+  width:300rpx;
+  height:500rpx;
+  top:0rpx;
+  right:0rpx;
+}

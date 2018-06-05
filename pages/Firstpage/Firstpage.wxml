@@ -13,4 +13,10 @@
     </view>
     <view class="hr1"></view>
   </view>
+  <!-- <view catchtap='adddetial'> -->
+    <!-- <view animation="{{animation}}" class="view"></view> -->
+      <!-- <image class="add_icon" src="../../image/rabbit2.png"></image> -->
+  <view>
+      <image src="../../image/rabbit2.png" class="add_icon" animation="{{animation}}" ></image>
+  </view>
 </view>

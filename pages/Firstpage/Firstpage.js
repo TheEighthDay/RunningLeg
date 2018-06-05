@@ -1,13 +1,35 @@
 var app = getApp()
 Page({
   data:{
-    foodlist: []
+    foodlist: [],
+    animation: ''
   },
 
   onShow: function() {
     this.getbill(true);
-    
+    this.animation = wx.createAnimation({
+      duration: 150,
+      timingFunction: 'ease-in-out', // "linear","ease","ease-in","ease-in-out","ease-out","step-start","step-end"
+      delay: 100,
+      transformOrigin: 'top 0'
+    })
+    this.animation.rotate(-3.5).step()
+    this.setData({
+      animation: this.animation.export()
+    })
+    var n=-1;
+    setInterval(function () {
+      // animation.translateY(-60).step()
+      n = n*(-1);
+      // k=(k+1)%2;
+      // console.log(n);
+      this.animation.rotate(7 * (n)).step()
+      this.setData({
+        animation: this.animation.export()
+      })
+    }.bind(this), 300)
   },
+ 
   onShareAppMessage: function (res) {
     if (res.from === 'button') {
       // 来自页面内转发按钮
