@@ -1,5 +1,6 @@
 <view class='container'> 
   <view class='section' wx:for="{{status_one}}" wx:key="{{item}}">
+      <text class='key'>接收订单</text>
       <view class='line'>发单人姓名: {{item.send_username}}</view>
       <view class='line'>发单人手机号: {{item.send_phonenumber}}</view>
       <view class='line'>取货地址: {{item.send_address}}</view>
@@ -7,9 +8,8 @@
       <view class='line'>您已成功接到此单</view>
       <button class = "btn" size="mini" bindtap='confirmbill' id = "{{item.id}}">结束交易</button>
   </view>
-
-
    <view class='section' wx:for="{{status_two}}" wx:key="{{item}}">
+      <text class='key'>发送订单</text>
       <view class='line'>发单截至时间 :  {{item.hope_time}}</view>
       <view class='line'>备注: {{item.remark}}</view>
       <view class='line'>等待接单中...</view>

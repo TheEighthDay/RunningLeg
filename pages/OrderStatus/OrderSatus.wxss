@@ -1,24 +1,27 @@
+page {
+  height: 100%;
+  background-color: #F5F5F5;
+}
 .container { 
   display: flex;
   flex-direction: column;   /*每个元素从上往下放，各占一行*/  
   justify-content: space-around;  /*控制元素在垂直上的布局*/
-  background-color: #F5F5F5;
+  height: auto;
   padding-bottom: 25rpx;
 }
 .section {
   position: relative;
-  height: 500rpx;
+  height: 550rpx;
   background-color: #FFFFFF;
   border-radius: 10rpx;
   border: 3rpx solid #DDD; 
-  margin-left: 20rpx;
-  margin-right: 20rpx;
-  margin-top: 15rpx;
+  padding-top: 15rpx;
+  margin: 15rpx 20rpx auto 20rpx;
 }
 .line{ 
   font-size: 30rpx;
   color:#696969;
-  margin-left: 30rpx;
+  margin-left: 35rpx;
   margin-top: 35rpx;
 }
 .btn{
@@ -26,4 +29,10 @@
   margin-left: 200rpx;
   position: absolute;
   bottom: 60rpx;
+}
+.key {
+  font-size: 35rpx;
+  margin-top: 35rpx;
+  margin-left: 35rpx;
+  font-weight: bold;
 }

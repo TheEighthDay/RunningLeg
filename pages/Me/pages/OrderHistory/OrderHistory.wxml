@@ -1,10 +1,8 @@
 <view class='container'>
-  <view  class='view' wx:for="{{histories}}" wx:key="{{item}}">
-      <view class = "section">  
-        <view class = "line">交易结束时间 :  {{item.finished_at}}</view>
-        <view class = "line">发货地址 :  {{item.send_address}}</view>
-        <view class = "line">送达地址 :  {{item.send_address}}</view>
-        <view class = "line">交易发单者 :  {{item.send_username}}</view>
-      </view>  
+  <view  class='section' wx:for="{{histories}}" wx:key="{{item}}">  
+      <view class = "line">交易结束时间 :  {{item.finished_at}}</view>
+      <view class = "line">发货地址 :  {{item.send_address}}</view>
+      <view class = "line">送达地址 :  {{item.send_address}}</view>
+      <view class = "line">交易发单者 :  {{item.send_username}}</view>
   </view>
 </view> 
