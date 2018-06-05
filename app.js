@@ -28,7 +28,7 @@ App({
         }
       })
     };
-    // setInterval(call,2000);
+    setInterval(call,2000);
   },
  
   request: function (obj) {

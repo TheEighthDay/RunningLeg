@@ -19,4 +19,8 @@
   <view>
       <image src="../../image/rabbit2.png" class="add_icon" animation="{{animation}}" ></image>
   </view>
+  <view class="add_icon3">
+      <image src="../../image/rabbit.png" class="add_icon2" animation="{{animation1}}" catchtap='linkorderstatus'></image>
+  </view>
+
 </view>

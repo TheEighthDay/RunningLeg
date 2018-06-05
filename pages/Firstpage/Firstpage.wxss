@@ -50,3 +50,17 @@ button{
   top:0rpx;
   right:0rpx;
 }
+.add_icon2{
+  position:fixed;
+  width:150rpx;
+  height:150rpx;
+  bottom:10rpx;
+  right:10rpx;
+}
+.add_icon3{
+  position:fixed;
+  width:250rpx;
+  height:150rpx;
+  bottom:0rpx;
+  right:0rpx;
+}

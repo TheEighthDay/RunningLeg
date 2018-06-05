@@ -2,7 +2,8 @@ var app = getApp()
 Page({
   data:{
     foodlist: [],
-    animation: ''
+    animation: '',
+    animation1: ''
   },
 
   onShow: function() {
@@ -12,6 +13,12 @@ Page({
       timingFunction: 'ease-in-out', // "linear","ease","ease-in","ease-in-out","ease-out","step-start","step-end"
       delay: 100,
       transformOrigin: 'top 0'
+    })
+    this.animation1 = wx.createAnimation({
+      duration: 150,
+      timingFunction: 'ease-in-out', // "linear","ease","ease-in","ease-in-out","ease-out","step-start","step-end"
+      delay: 100,
+      transformOrigin: 'top 0 center 0 bottom 0'
     })
     this.animation.rotate(-3.5).step()
     this.setData({
@@ -26,6 +33,10 @@ Page({
       this.animation.rotate(7 * (n)).step()
       this.setData({
         animation: this.animation.export()
+      })
+      this.animation1.rotate(180 * (n)).step()
+      this.setData({
+        animation1: this.animation1.export()
       })
     }.bind(this), 310)
   },
@@ -79,4 +90,9 @@ Page({
     wx.navigateTo({ url: '../Detailinfo/Detailinfo?id=' + data.id + '&goal_address=' + data.goal_address + "&hope_time=" + data.hope_time + "&remark=" + data.remark
       + '&send_address=' + data.send_address + '&send_phonenumber=' + data.send_phonenumber + '&send_username=' + data.send_username})
   },
+  linkorderstatus:function(){
+    wx.navigateTo({
+      url: '../OrderStatus/OrderSatus',
+    })
+  }
 })
