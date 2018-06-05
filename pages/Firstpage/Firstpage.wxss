@@ -1,7 +1,5 @@
-@import "/utils/font.wxss";
 .container {
   background-color: #fff;
-  
 }
 .firstpage-image {
   height: 250rpx;
@@ -24,7 +22,6 @@ button{
   color: #708090;
 }
 .firstpage-text-key{
-  font-family: "iconfont" !important; 
   display: block;
   margin: 10rpx;
   font-size: 35rpx;

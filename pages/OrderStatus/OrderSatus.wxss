@@ -1,62 +1,29 @@
-
-.container {
-  padding: 25rpx;    
+.container { 
   display: flex;
   flex-direction: column;   /*每个元素从上往下放，各占一行*/  
-  /* align-items: center; */
   justify-content: space-around;  /*控制元素在垂直上的布局*/
-    /* background-image: url(http://p3379ff71.bkt.clouddn.com/59c3291643e7a_1024.jpg);   */
-  /* background-image: url(http://p3379ff71.bkt.clouddn.com/111.jpg); */
+  background-color: #F5F5F5;
+  padding-bottom: 25rpx;
 }
-view {
+.section {
   position: relative;
-  height: 250px;
+  height: 500rpx;
+  background-color: #FFFFFF;
+  border-radius: 10rpx;
+  border: 3rpx solid #DDD; 
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-top: 15rpx;
 }
-.line{
-  height: 0.00000000001px;  
-  display: inline-block; 
-  /* position: absolute; */
-  margin: 50rpx;
-  top: 1rpx; 
-  width: 500px;
-  /* display: block;
-  margin: 10rpx; */
+.line{ 
   font-size: 30rpx;
   color:#696969;
-}
-.status{
-  height: 30px; 
-  display: flex;
-  align-items: center;
-}
- .section_receive {
-  height: 205px;
-  width: 300px;
-  color: #000000; 
-  background-size: 300px;
-  background-image: url(http://p3379ff71.bkt.clouddn.com/59c3291e7a_14.jpg);  
-}
-.section_sent {
-  height: 205px;
-  width: 300px;
-  color: #000000; 
-  background-size: 300px;
-    background-image: url(http://p3379ff71.bkt.clouddn.com/59c3291e7a_14.jpg);  
-}
-.section_sent_btn {
-  color: #FF0000; 
-  font-size: 40rpx;
+  margin-left: 30rpx;
+  margin-top: 35rpx;
 }
 .btn{
-  width: 100px;
-  height: 50px;  
-  background-color: rgba(255, 255, 255, 0);
+  width: 300rpx;
+  margin-left: 200rpx;
+  position: absolute;
+  bottom: 60rpx;
 }
-.btn::after{ border: none;}  
-.btn_sent{
-  top: 80px;
-  width: 100px;
-  height: 50px;  
-  background-color: rgba(255, 255, 255, 0);
-}
-.btn_sent::after{ border: none;}  

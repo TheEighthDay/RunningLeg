@@ -8,8 +8,6 @@ page {
   align-items: center; 
   justify-content: space-around;  /*控制元素在垂直上的布局*/
   background-color: #8FBC8F;
- /* -webkit-filter: blur(5px); /* Chrome, Safari, Opera */  
-  /*filter: blur(5px);  */
 }
 .bottom-div {
   background-color: #F5F5F5;
