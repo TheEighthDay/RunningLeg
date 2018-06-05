@@ -27,7 +27,7 @@ Page({
       this.setData({
         animation: this.animation.export()
       })
-    }.bind(this), 300)
+    }.bind(this), 310)
   },
  
   onShareAppMessage: function (res) {
@@ -50,6 +50,7 @@ Page({
       url: "https://theeighthday.cn/getbill",
       success: function (res) {
           length = res.data.length;
+          
           that.setData({
             foodlist: res.data.data,
           });

@@ -13,6 +13,12 @@ Page({
   },
   onShow : function(){
     var app=getApp();
+    if (app.globalData.userInfo.address==null){
+      app.globalData.userInfo.address='';
+    }
+    if (app.globalData.userInfo.phonenumber == null) {
+      app.globalData.userInfo.phonenumber = '';
+    }
     this.setData({
       userInfo: app.globalData.userInfo,
       goal_address: app.globalData.userInfo.address,

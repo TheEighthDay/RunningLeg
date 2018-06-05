@@ -16,7 +16,7 @@ Page({
       send_address: options.send_address,
       send_username: options.send_username,
       send_phonenumber: options.send_phonenumber,
-      hope_time: options.hope_time,
+      hope_time: options.hope_time.split(' ')[4],
       remark: options.remark,
       goal_address: options.goal_address
     })
