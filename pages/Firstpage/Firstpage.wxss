@@ -55,7 +55,7 @@ button{
   width:150rpx;
   height:150rpx;
   bottom:10rpx;
-  right:10rpx;
+  right:20rpx;
 }
 .add_icon3{
   position:fixed;
