@@ -77,12 +77,15 @@ Page({
 
   generateRandom: function() {
     var foodlist = this.data.foodlist;
-    foodlist.forEach(function(item) {
-      item.imagePath = '/image/' + Math.ceil(12 * Math.random()) + '.png';
-    });
-    this.setData({
-      foodlist: foodlist,
-    });
+    
+    if (foodlist.length!=0){
+      foodlist.forEach(function (item) {
+        item.imagePath = '/image/' + Math.ceil(12 * Math.random()) + '.png';
+      });
+      this.setData({
+        foodlist: foodlist,
+      });
+    }
   },
   play: function (event){
     var data = event.currentTarget.dataset;
