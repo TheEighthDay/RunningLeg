@@ -106,16 +106,19 @@ Page({
       },
       success: function (res) {
         console.log(res)
-        if (res.data.success ==1) {
+        if (res.data.success ==1) { 
           console.log("ok");
           wx.showToast({
             title: '成功',
+          })
+          wx.navigateTo({
+            url: '../Firstpage/Firstpage',
           })
         }
         else{
           if (res.data.msg){
             wx.showToast({
-              title: '未完成订单不能超过三个',
+              title: res.data.msg,
             })
 
           }else{

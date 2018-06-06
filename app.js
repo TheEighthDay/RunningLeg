@@ -10,7 +10,16 @@ App({
           if(res.data.success==1){
             that.globalData.sendingbill_id = res.data.data.map(item => item.id);
             var B = that.globalData.sendingbill_id;
-            if (B) {
+            if (B.length < that.globalData.tem){
+              console.log("有个订单被接啦");
+              wx.showToast({
+                title: '有个订单被接啦,点击小风车查看吧',
+                duration: 2000
+              })
+              
+            }
+            that.globalData.tem = B.length;
+            if (B.length!=0) {
               for (var i = 0; i < B.length; i++) {
                 var id = B[i];
                 that.request({
@@ -48,6 +57,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    sendingbill_id:null
+    sendingbill_id:[],
+    tem:-1,
   }
 })

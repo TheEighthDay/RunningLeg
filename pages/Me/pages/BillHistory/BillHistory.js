@@ -9,7 +9,7 @@ Page({
       url: "https://theeighthday.cn/getsentbill",
       success: function (res) {
         console.log(res.data.data)
-        length = res.data.length
+        
         that.setData({
           histories: res.data.data,
         });

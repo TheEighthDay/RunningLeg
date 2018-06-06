@@ -55,21 +55,28 @@ Page({
   onPullDownRefresh :function(){
     this.getbill(true);
   },
-  getbill: function (isFirstIn) {
+  getbill: function () {
     var that = this;
     app.request({
       url: "https://theeighthday.cn/getbill",
       success: function (res) {
-          length = res.data.length;
-          
-          that.setData({
-            foodlist: res.data.data,
-          });
-          if(isFirstIn) {
+          if(res.data.success==1){
+            console.log(res.data);
+            that.setData({
+              foodlist: res.data.data,
+            });
             that.generateRandom();
+            wx.stopPullDownRefresh();
+            console.log(res.data);
           }
-          wx.stopPullDownRefresh();
-          console.log(res.data);
+          else{
+            console.info("获取订单失败");
+          }
+          
+      },
+      fail:function(){
+        console.log("fail获取订单失败")
+
       }
     })
    
@@ -80,7 +87,7 @@ Page({
     
     if (foodlist.length!=0){
       foodlist.forEach(function (item) {
-        item.imagePath = '/image/' + Math.ceil(12 * Math.random()) + '.png';
+        item.imagePath = '/image/' + (Number(item.hope_time.split(' ')[4].split(':')[0])%12+1).toString() + '.png';
       });
       this.setData({
         foodlist: foodlist,
