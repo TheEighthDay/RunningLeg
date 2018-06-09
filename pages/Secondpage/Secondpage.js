@@ -99,7 +99,7 @@ Page({
       url: "https://theeighthday.cn/createbill",
       data: {
         "goal_address": that.data.goal_address,
-        "hope_time": that.data.hope_time,  //必须这种格式，屈萌记得把前端的时间格式转换一下
+        "hope_time": that.data.hope_time, 
         "send_address": that.data.send_address,
         "remark": that.data.remark,
         "phonenumber": that.data.phonenumber,
@@ -107,13 +107,19 @@ Page({
       success: function (res) {
         console.log(res)
         if (res.data.success ==1) { 
-          console.log("ok");
-          wx.showToast({
-            title: '成功',
-          })
-          wx.navigateTo({
-            url: '../Firstpage/Firstpage',
-          })
+          wx.showModal({
+            content: '发单成功，现在去看？',
+            cancelText: '再发一单',
+            confirmText: "好的",
+            success:(res) => {
+              if (res.confirm) {
+                wx.switchTab({
+                  url: './../Firstpage/Firstpage',
+                });
+              }
+            }
+          });
+          
         }
         else{
           if (res.data.msg){
