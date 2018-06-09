@@ -11,7 +11,7 @@ page {
 }
 .section {
   position: relative;
-  height: 550rpx;
+  height: 600rpx;
   background-color: #FFFFFF;
   border-radius: 10rpx;
   border: 3rpx solid #DDD; 
@@ -29,10 +29,12 @@ page {
   margin-left: 200rpx;
   position: absolute;
   bottom: 60rpx;
+  background-color:#8FBC8F;
+  color: #fff;
 }
 .key {
   font-size: 35rpx;
   margin-top: 35rpx;
   margin-left: 35rpx;
-  font-weight: bold;
+  color: #8FBC8F;
 }

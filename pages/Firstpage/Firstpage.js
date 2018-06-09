@@ -55,21 +55,35 @@ Page({
   onPullDownRefresh :function(){
     this.getbill(true);
   },
-  getbill: function (isFirstIn) {
+  getbill: function () {
     var that = this;
     app.request({
       url: "https://theeighthday.cn/getbill",
       success: function (res) {
-          length = res.data.length;
-          
-          that.setData({
-            foodlist: res.data.data,
-          });
-          if(isFirstIn) {
+          if(res.data.success==1){
+            console.log(res.data);
+            let foodlist = res.data.data;
+            foodlist.forEach((food) => {
+              const dateObj = new Date(`${food.hope_time}+0800`);
+              const date = dateObj.toLocaleDateString();
+              const hour = dateObj.toLocaleTimeString();
+              food.hope_time_format = `${date} ${hour}`;
+            });
+            that.setData({
+              foodlist,
+            });
             that.generateRandom();
+            wx.stopPullDownRefresh();
+            console.log(res.data);
           }
-          wx.stopPullDownRefresh();
-          console.log(res.data);
+          else{
+            console.info("获取订单失败");
+          }
+          
+      },
+      fail:function(){
+        console.log("fail获取订单失败")
+
       }
     })
    
@@ -77,13 +91,15 @@ Page({
 
   generateRandom: function() {
     var foodlist = this.data.foodlist;
-    console.log(this.data);
-    foodlist.forEach(function(item) {
-      item.imagePath = '/image/' + Math.ceil(12 * Math.random()) + '.png';
-    });
-    this.setData({
-      foodlist: foodlist,
-    });
+    
+    if (foodlist.length!=0){
+      foodlist.forEach(function (item) {
+        item.imagePath = '/image/' + (new Date(item.hope_time).getHours() % 12 + 1).toString() + '.png';
+      });
+      this.setData({
+        foodlist: foodlist,
+      });
+    }
   },
   play: function (event){
     var data = event.currentTarget.dataset;

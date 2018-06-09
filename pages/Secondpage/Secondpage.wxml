@@ -1,30 +1,26 @@
 <view class='container'>
-  <view class="section">
-    <text>送达地址</text>
-    <input placeholder="送达地址" bindblur="blurName1" value="{{goal_address}}" bindconfirm="changeName" focus bindinput="handleInput" />
-  </view>
+
+    <text class='text-key'>送达地址</text>
+    <input class='text' placeholder="送达地址" bindblur="blurName1" value="{{goal_address}}" bindconfirm="changeName" focus bindinput="handleInput" />
+    <view class="hr1"></view>
   
-  <view class="section">
-    <text>手机号码</text>
-    <input placeholder="您的手机号码" bindblur="blurName5" value="{{phonenumber}}" bindconfirm="changeName" focus />
-  </view>
+    <text class='text-key'>手机号码</text>
+    <input class='text' placeholder="您的手机号码" bindblur="blurName5" value="{{phonenumber}}" bindconfirm="changeName" focus />
+    <view class="hr1"></view>
 
-  <view class="section">
-    <text>接单时间</text>
-    <picker mode="time" class="icon" start="00:00" end="23:59" bindchange="bindTimeChange">
-     <input placeholder="希望接单时间"  value="{{showtime}}" bindconfirm="changeName" focus />
+    <text class='text-key'>接单时间</text>
+    <picker mode="time" start="00:00" end="23:59" bindchange="bindTimeChange">
+     <input class='text' placeholder="希望接单时间"  value="{{showtime}}" bindconfirm="changeName" focus />
     </picker>
-  </view> 
+    <view class="hr1"></view>
 
-  <view class="section">
-    <text>取货地址</text>
-    <input placeholder="跑腿人员取货地址" bindblur="blurName3" bindconfirm="changeName" value="{{send_address}}" focus bindtap="chooseaddress"/>
-  </view>
+    <text class='text-key'>取货地址</text>
+    <input class='text' placeholder="跑腿人员取货地址" bindblur="blurName3" bindconfirm="changeName" value="{{send_address}}" focus bindtap="chooseaddress"/>
+    <view class="hr1"></view>
 
-  <view class="section">
-    <text>备注信息</text>
-    <input placeholder="选填备注信息" bindblur="blurName4" bindconfirm="changeName" value="{{remark}}" focus />
-  </view>
+    <text class='text-key'>备注信息</text>
+    <input class='text' placeholder="选填备注信息" bindblur="blurName4" bindconfirm="changeName" value="{{remark}}" focus />
+    <view class="hr1"></view>
 
-  <button  plain="true" class='button' bindtap='sendbill'>确定发单</button>
 </view>
+<button class='button' bindtap='sendbill'>确定发单</button>

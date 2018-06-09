@@ -8,32 +8,85 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     map_width: 380,
-    map_height: 380
+    map_height: 380,
+    ishidden: {},
   },
   bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
-  handleBlur: function (e) {
+
+  handleInput: function (e) {
     const type = e.currentTarget.dataset.type;
+    if (type === 'username' || type === 'address') {
+      if (e.detail.value === '') {
+        let temp = this.data.ishidden;
+        temp[type] = false;
+        this.setData({
+          ishidden: temp
+        })
+      }else {
+        let temp = this.data.ishidden;
+        temp[type] = true;
+        this.setData({
+          ishidden: temp
+        })
+      }
+    } else if (type === 'phonenumber') {
+      if (/^1[35789]\d{9}$/.test(e.detail.value)) {
+        let temp = this.data.ishidden;
+        temp[type] = true;
+        this.setData({
+          ishidden: temp
+        });
+      } else {
+        let temp = this.data.ishidden;
+        temp[type] = false;
+        this.setData({
+          ishidden: temp
+        });
+      }
+    }
     this.setData({
       [type]: e.detail.value
-    })
+    });
   },
   chooseaddress:function(){
-    var that=this;
     wx.chooseLocation({
-      success: function(res) {
+      success: (res) => {
         console.log(res);
-        that.setData({
+        this.setData({
           address:res.address
-        })
+        });
+        console.log(res.address);
+        if(res.address) {
+            let temp = Object.assign({}, this.data.ishidden);
+            temp.address = true;
+            this.setData({
+              ishidden: temp
+            });
+        } else {
+          let temp = Object.assign({}, this.data.ishidden);
+          temp.address = false;
+          this.setData({
+            ishidden: temp
+          });
+        }
       },
     })
   },
   updateuser: function () {
     var that = this;
+    let ishidden = this.data.ishidden;
+    if (!(ishidden.username && ishidden.phonenumber && ishidden.address)) {
+      wx.showModal({
+        content: '信息填写有误，请确认后点击完成',
+        confirmText: "我知道了",
+        showCancel: false,
+      });
+      return;
+    }
     app.request({
       url: "https://theeighthday.cn/updateuser",
       //需要把页面用户填的信息拉过来，成功后记得弹窗提示

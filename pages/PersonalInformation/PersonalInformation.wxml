@@ -3,20 +3,23 @@
     <view style='margin-top: 30rpx;'>
       <view class="section">
         <text>用户名称</text>
-        <input placeholder="设置用户名" value="{{username}}" bindblur="handleBlur" data-type="username" bindconfirm="changeName" />
+        <input bindinput="handleInput" placeholder="设置用户名" value="{{username}}" data-type="username" bindconfirm="changeName" />
+        <icon wx:if="{{!ishidden.username}}" type="warn" size="20"></icon>
       </view>
-
+      
       <view class="section">
         <text>手机号码</text>
-        <input placeholder="设置手机号码" value="{{phonenumber}}" bindblur="handleBlur" data-type="phonenumber" bindconfirm="changeName" />
+        <input bindinput="handleInput" placeholder="设置手机号码" value="{{phonenumber}}" data-type="phonenumber" bindconfirm="changeName" />
+        <icon wx:if="{{!ishidden.phonenumber}}" type="warn" size="20"></icon>
       </view>
 
       <view class="section">
         <text>收货地址</text>
-        <input placeholder="设置收货地址" value="{{address}}" bindblur="handleBlur" data-type="address" bindconfirm="changeName" bindtap="chooseaddress"/>
+        <input bindinput="handleInput" placeholder="设置收货地址" value="{{address}}" data-type="address" bindconfirm="changeName" bindtap="chooseaddress"/>
+        <icon wx:if="{{!ishidden.address}}" type="warn" size="20"></icon>
       </view>
     </view>
 
-    <button  plain="true" class='button' bindtap='updateuser' style='margin-bottom: 100rpx;'>完成</button>
+    <button class='button' bindtap='updateuser'>完成</button>
   </view>
 </view>

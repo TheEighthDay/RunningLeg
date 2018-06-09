@@ -14,11 +14,18 @@ Page({
     app.request({
       url: "https://theeighthday.cn/getsendingbill",
       success: function (res) {
+        let billinfo = res.data.data;
+        billinfo.forEach((info)=>{
+          const dateObj = new Date(`${info.hope_time}+0800`);
+          const date = dateObj.toLocaleDateString();
+          const hour = dateObj.toLocaleTimeString();
+          info.hope_time = `${date} ${hour}`;
+        })
         that.setData({
-          status_two: res.data.data,
+          status_two: billinfo,
         });
         wx.stopPullDownRefresh();
-        console.log(res.data);
+        
       }
     }),
     app.request({

@@ -10,18 +10,19 @@
     "pages/Detailinfo/Detailinfo",
     "pages/Wallet/Wallet",
     "pages/Me/pages/BillHistory/BillHistory",
-    "pages/Me/pages/OrderHistory/OrderHistory"
+    "pages/Me/pages/OrderHistory/OrderHistory",
+    "pages/Billinfo/Billinfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#6495ED",
+    "navigationBarBackgroundColor": "#8FBC8F",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   },
   "tabBar": {
-    "color": "white",
-    "selectedColor": "#000000",
-    "backgroundColor": "#F5F5F5",
+    "color": "#696969",
+    "selectedColor": "#FFF",
+    "backgroundColor": "#8FBC8F",
     "borderStyle": "white",
     "position": "bottom",
     "list": [

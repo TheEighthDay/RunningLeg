@@ -24,4 +24,3 @@
   <text class='detailinfo-text'>{{remark}}</text>
   <view class="hr1"></view>
 </view>
-<button class='button' bindtap="receivebill">确定接单</button>

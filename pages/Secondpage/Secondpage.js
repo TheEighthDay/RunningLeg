@@ -106,25 +106,28 @@ Page({
       },
       success: function (res) {
         console.log(res)
-        if (res.data.success ==1) {
+        if (res.data.success ==1) { 
           console.log("ok");
           wx.showToast({
             title: '成功',
           })
-          wx.redirectTo({
-            url: "/pages/Firstpage/Firstpage"
+          wx.navigateTo({
+            url: '../Firstpage/Firstpage',
           })
         }
         else{
           if (res.data.msg){
-            wx.showToast({
-              title: '未完成订单不能超过三个',
-            })
-
+            wx.showModal({
+              content: res.data.msg,
+              confirmText: "我知道了",
+              showCancel: false,
+            });
           }else{
-            wx.showToast({
-              title: '失败',
-            })
+            wx.showModal({
+              content: '信息填写有误，请确认后点击完成',
+              confirmText: "我知道了",
+              showCancel: false,
+            });
           }
          
 

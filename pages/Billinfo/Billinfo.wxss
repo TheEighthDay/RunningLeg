@@ -21,11 +21,6 @@ page {
   font-size: 30rpx;
   color: #696969;
 }
-.button {
-  background-color:#8FBC8F;
-  margin:30rpx 150rpx;
-  color: #fff;
-}
 .hr1{ 
   margin-left: 55rpx;
   margin-right: 55rpx;

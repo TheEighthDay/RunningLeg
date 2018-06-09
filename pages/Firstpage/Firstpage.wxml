@@ -6,7 +6,7 @@
       <image src = "{{item.imagePath}}" class='firstpage-image'></image>
       <view class="firstpage-texts">
           <text class='firstpage-text-key'>领取时间</text>
-          <text class='firstpage-text'>{{item.hope_time}}</text>
+          <text class='firstpage-text'>{{item.hope_time_format}}</text>
           <text class='firstpage-text-key'>送达地点</text>
           <text class='firstpage-text'>{{item.goal_address}}</text>
       </view>
