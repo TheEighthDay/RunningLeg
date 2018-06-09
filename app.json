@@ -14,14 +14,14 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#8FBC8F",
+    "navigationBarBackgroundColor": "#6495ED",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "white",
     "selectedColor": "#000000",
-    "backgroundColor": "#8FBC8F",
+    "backgroundColor": "#F5F5F5",
     "borderStyle": "white",
     "position": "bottom",
     "list": [

@@ -25,6 +25,6 @@
   <text class='detailinfo-text'>{{remark}}</text>
   <view class="hr1"></view>
 
-<button  plain="true" class='button' bindtap="receivebill">确定接单</button> <!--接单后弹窗提醒-->
+<button  plain="true" class='button' bindtap="receivebill">确定接单</button>
 </view>
 

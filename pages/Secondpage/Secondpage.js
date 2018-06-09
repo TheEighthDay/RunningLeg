@@ -111,6 +111,9 @@ Page({
           wx.showToast({
             title: '成功',
           })
+          wx.redirectTo({
+            url: "/pages/Firstpage/Firstpage"
+          })
         }
         else{
           if (res.data.msg){

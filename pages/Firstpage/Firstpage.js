@@ -77,6 +77,7 @@ Page({
 
   generateRandom: function() {
     var foodlist = this.data.foodlist;
+    console.log(this.data);
     foodlist.forEach(function(item) {
       item.imagePath = '/image/' + Math.ceil(12 * Math.random()) + '.png';
     });

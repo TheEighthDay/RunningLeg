@@ -7,7 +7,7 @@ page {
   flex-direction: row;   /*每个元素从上往下放，各占一行*/  
   align-items: center; 
   justify-content: space-around;  /*控制元素在垂直上的布局*/
-  background-color: #8FBC8F;
+  background-color: #6495ED;
 }
 .bottom-div {
   background-color: #F5F5F5;
