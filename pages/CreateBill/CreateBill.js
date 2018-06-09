@@ -36,7 +36,7 @@ Page({
     }
     return {
       title: '高校即时跑腿了解一下？',
-      path: '/pages/Firstpage',
+      path: '/pages/ReceiveBill',
       imageUrl: '/logo.jpg',
     }
 
@@ -114,7 +114,7 @@ Page({
             success:(res) => {
               if (res.confirm) {
                 wx.switchTab({
-                  url: './../Firstpage/Firstpage',
+                  url: './../ReceiveBill/ReceiveBill',
                 });
               }
             }

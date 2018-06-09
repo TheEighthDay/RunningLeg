@@ -2,8 +2,8 @@
   "pages": [
     "pages/Auth/Auth",
     "pages/OrderStatus/OrderSatus",
-    "pages/Firstpage/Firstpage",
-    "pages/Secondpage/Secondpage",
+    "pages/ReceiveBill/ReceiveBill",
+    "pages/CreateBill/CreateBill",
     "pages/Me/Me",
     "pages/PersonalInformation/PersonalInformation",
     "pages/logs/logs",
@@ -27,13 +27,13 @@
     "position": "bottom",
     "list": [
       {
-        "pagePath": "pages/Firstpage/Firstpage",
+        "pagePath": "pages/ReceiveBill/ReceiveBill",
         "text": "接订单",
         "iconPath": "/image/send_unselected.png",
         "selectedIconPath": "/image/send.png"
       },
       {
-        "pagePath": "pages/Secondpage/Secondpage",
+        "pagePath": "pages/CreateBill/CreateBill",
         "text": "发订单",
         "iconPath": "/image/receive_unselected.png",
         "selectedIconPath": "/image/receive.png"

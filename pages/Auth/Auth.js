@@ -11,7 +11,7 @@ Page({
         if (res.authSetting['scope.userInfo']) {
           console.info("已经授权");
           wx.switchTab({
-            url: '../Firstpage/Firstpage'
+            url: '../ReceiveBill/ReceiveBill'
           })
           console.info("跳转成功");
           wx.getUserInfo({
@@ -38,7 +38,7 @@ Page({
     if (e.detail.userInfo) {
       console.info("授权成功");
       wx.switchTab({
-        url: '../Firstpage/Firstpage'
+        url: '../ReceiveBill/ReceiveBill'
       })
       console.info("跳转成功");
       app.globalData.userInfo = e.detail.userInfo;

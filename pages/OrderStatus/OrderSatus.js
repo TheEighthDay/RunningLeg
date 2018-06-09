@@ -15,6 +15,7 @@ Page({
       url: "https://theeighthday.cn/getsendingbill",
       success: function (res) {
         let billinfo = res.data.data;
+        console.log(res.data.data);
         billinfo.forEach((info)=>{
           const dateObj = new Date(`${info.hope_time}+0800`);
           const date = dateObj.toLocaleDateString();

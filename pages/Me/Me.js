@@ -59,7 +59,7 @@ Page({
     }
     return {
       title: '高校即时跑腿了解一下？',
-      path: '/pages/Firstpage',
+      path: '/pages/ReceiveBill',
       imageUrl: '/logo.jpg',
     }
   },
