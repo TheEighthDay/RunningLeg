@@ -87,7 +87,14 @@ page {
   color: #888888;
   font-size: 28rpx;
 }
-
+.button {
+  position: absolute;
+  left: 280rpx;
+  top: 80rpx;
+  background-color: #8FBC8F;
+  color: #fff;
+  border: 3rpx solid #fff;
+}
 
 .navigator-box {
   opacity: 0;
@@ -201,9 +208,6 @@ page {
   align-items: center;
 }
 
-.center{
-  justify-self: flex-end;
-}
 .wallet{
    display: space-between;
 }

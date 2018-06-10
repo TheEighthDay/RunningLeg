@@ -136,13 +136,13 @@ Page({
         hasUserInfo: true
       });
       let ishidden = {};
-      if (app.globalData.userInfo.username !== '') {
+      if (app.globalData.userInfo.username) {
         ishidden.username = true;
       }
-      if (app.globalData.userInfo.address !== '') {
+      if (app.globalData.userInfo.address) {
         ishidden.address = true;
       }
-      if (/^1[35789]\d{9}$/.test(app.globalData.userInfo.phonenumber)) {
+      if (app.globalData.userInfo.phonenumber && /^1[35789]\d{9}$/.test(app.globalData.userInfo.phonenumber)) {
         ishidden.phonenumber = true;
       }
       this.setData({

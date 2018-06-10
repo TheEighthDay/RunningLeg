@@ -5,9 +5,9 @@
           <view class="content-name" >{{userInfo.nickname}}</view> 
           <view class="content-pnum" >{{userInfo.phonenumber}}</view>
       </view> 
-     
 </view>
 </navigator>
+<button wx:if='{{!userInfo}}' class='button' bindtap='login'>授权登录</button>
 
 <view class='bottom-div'>
         <view class="info-div">

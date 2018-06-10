@@ -15,4 +15,12 @@
       <view class='line'>等待接单中...</view>
       <button class = "btn" size="mini" bindtap='confirmbill_receive' id = "{{item.id}}">结束交易</button>
   </view>
+  <view class='section' wx:for="{{status_alreadyreceived}}" wx:key="{{item}}">
+      <text class='key'>订单已被接收</text>
+      <view class='line'>截至时间 :  {{item.hope_time}}</view>
+      <view class='line'>备注: {{item.remark}}</view>
+      <view class='line'>接单人:{{item.receive_username}}</view>
+       <view class='line'>接单人手机号码:{{item.receive_phonenumber}}</view>
+      <button class = "btn" size="mini" bindtap='confirmbill_receive' id = "{{item.id}}">结束交易</button>
+  </view>
  </view>  

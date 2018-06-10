@@ -4,6 +4,7 @@ Page({
   data: {
     status_one: [],
     status_two: [],
+    status_alreadyreceived: []
   },
 
   /**
@@ -15,7 +16,6 @@ Page({
       url: "https://theeighthday.cn/getsendingbill",
       success: function (res) {
         let billinfo = res.data.data;
-        console.log(res.data.data);
         billinfo.forEach((info)=>{
           const dateObj = new Date(`${info.hope_time}+0800`);
           const date = dateObj.toLocaleDateString();
@@ -30,13 +30,21 @@ Page({
       }
     }),
     app.request({
+      url: "https://theeighthday.cn/getsendingbillnew",
+      success: function (res) {
+        that.setData({
+          status_alreadyreceived: res.data.data,
+        });
+        wx.stopPullDownRefresh();
+      }
+    })
+    app.request({
       url: "https://theeighthday.cn/getreceivingbill",
       success: function (res) {
         that.setData({
           status_one: res.data.data,
         });
         wx.stopPullDownRefresh();
-        console.log(res.data);
       }
     })
   },

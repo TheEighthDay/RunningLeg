@@ -1,0 +1,6 @@
+.button {
+  background-color:#8FBC8F;
+  margin:30rpx 150rpx;
+  color: #fff;
+  margin-top: 500rpx;
+}

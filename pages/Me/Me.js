@@ -1,4 +1,4 @@
-
+var app = getApp()
 Page({
   data: {
     histories: [
@@ -47,6 +47,20 @@ Page({
   bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
+    })
+  },
+  login: function () {
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          console.info("已经授权");
+          wx.getUserInfo({
+            success: function (res) {
+              app.globalData.userInfo = res.userInfo;
+            }
+          })
+        }
+      },
     })
   },
   onPullDownRefresh: function () {
