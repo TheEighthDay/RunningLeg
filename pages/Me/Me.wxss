@@ -89,7 +89,7 @@ page {
 }
 .button {
   position: absolute;
-  left: 280rpx;
+  left: 260rpx;
   top: 80rpx;
   background-color: #8FBC8F;
   color: #fff;

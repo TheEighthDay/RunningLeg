@@ -32,6 +32,13 @@ Page({
     app.request({
       url: "https://theeighthday.cn/getsendingbillnew",
       success: function (res) {
+        let billinfo = res.data.data;
+        billinfo.forEach((info) => {
+          const dateObj = new Date(`${info.hope_time}+0800`);
+          const date = dateObj.toLocaleDateString();
+          const hour = dateObj.toLocaleTimeString();
+          info.hope_time = `${date} ${hour}`;
+        })
         that.setData({
           status_alreadyreceived: res.data.data,
         });

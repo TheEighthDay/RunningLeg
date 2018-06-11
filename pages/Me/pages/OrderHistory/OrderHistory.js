@@ -9,7 +9,14 @@ Page({
       url: "https://theeighthday.cn/getreceivedbill",
       success: function (res) {
         console.log(res.data.data)
-       
+        let list = res.data.data;
+        list.forEach((food) => {
+          const dateObj = new Date(`${food.finished_at}+0800`);
+          const date = dateObj.toLocaleDateString();
+          const hour = dateObj.toLocaleTimeString();
+          food.finished_at = `${date} ${hour}`;
+          //console.log(food.finished_at);
+        });
         that.setData({
           histories: res.data.data,
         });

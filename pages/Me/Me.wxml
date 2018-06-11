@@ -7,7 +7,7 @@
       </view> 
 </view>
 </navigator>
-<button wx:if='{{!userInfo}}' class='button' bindtap='login'>授权登录</button>
+<button wx:if='{{!hasUserInfo}}' class="button" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
 
 <view class='bottom-div'>
         <view class="info-div">
